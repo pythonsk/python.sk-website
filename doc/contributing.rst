@@ -1,7 +1,7 @@
 Contributors Guide
 ==================
 
-We are happy with any volunteers involvement in `python.sk <https://github.com/pyconsk/www.python.sk>`_ website. If you would like to help us, there are multiple ways to do so. Depending on your skills and type of work you would like to do (doesn’t have to be development), we encourage you to start with any of the following:
+We are happy with any volunteers involvement in `python.sk <https://www.python.sk>`_ website. If you would like to help us, there are multiple ways to do so. Depending on your skills and type of work you would like to do (doesn’t have to be development), we encourage you to start with any of the following:
 
 Write a blog, get involved on social media or make a talk
 ---------------------------------------------------------
@@ -18,9 +18,9 @@ If you feel that our documentation needs to be modified or we missed something, 
 Suggest an improvement or report bug
 ------------------------------------
 
-All issues are handled by `Github issue tracker <https://github.com/pyconsk/www.python.sk/issues>_`, if you've found a bug please create an issue for it.
+All issues are handled by `Github issue tracker <https://github.com/pyconsk/www.python.sk/issues>`_, if you've found a bug please create an issue for it.
 
-If there is something you are missing, and wish to be implemented in `Github issue tracker <https://github.com/pyconsk/www.python.sk/issues>_`, feel free to create an issue and mark it as an enhancement.
+If there is something you are missing, and wish to be implemented in `Github issue tracker <https://github.com/pyconsk/www.python.sk/issues>`_, feel free to create an issue and mark it as an enhancement.
 
 Update python.sk
 ----------------
