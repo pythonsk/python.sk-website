@@ -1,3 +1,66 @@
+Python SK webstránka
+#####################
+
+`Webová stranka Python SK <https://www.python.sk>`_, založená na frameworku `Flask <http://flask.pocoo.org/>`_, z ktorého sa vygeneruje statické HTML.
+
+
+Ako pomôct?
+-----------
+
+Od komunity pre komunity. Príspevky su viac než vítané. Prečítaj si našu `prispievateľskú príručku <https://github.com/pyconsk/www.python.sk/blob/master/doc/contributing.rst>`_ a pridaj sa k nám, radi budeme o tebe počuť!
+
+
+Štruktúra projektu
+------------------
+
+**3 branche**:
+
+- ``master`` - Flask aplikácia, šablony, statické súbory.
+- ``staging`` - statické HTML, generované z aplikácie v ``master`` branch (nerobte zmeny v tejto branchi).
+- ``live`` - statické HTML, vytvorené publikovaním zmien zo ``staging`` branche do ``live`` branche (nerobte zmeny v tejto branchi)
+
+Inštalácia
+----------
+
+- Naklonujeme si repozitár lokálne ku sebe::
+
+    git clone https://github.com/pyconsk/www.python.sk.git
+    cd python.sk
+
+- Vytvoríme si Python virtualné prostredie (pyvenv je súčasť Python 3) a nainštalujeme všetky potrebné závislosti::
+
+    pyvenv envs3
+
+- Aktivujeme Python virtuálne prostredie::
+
+    source envs3/bin/activate
+
+- Nainsštalujeme závislosti::
+
+    pip install -r doc/requirements.txt
+
+- Spustíme Flask server a prípadne otvoríme vo webovom prehliadači (http://127.0.0.1:5000)::
+
+    python views.py
+
+
+Pokiaľ nájdete chyby, prosím nahláste ich! Taktiež uvítame podnety od Vás, prípadne nás navštívte na našom verejnom chate
+`<https://riot.python.sk/#/room/#general:python.sk>`_.
+
+
+Webové odkazy
+-------------
+
+- web: `https://www.python.sk <https://www.python.sk/>`_
+- chat: `https://riot.python.sk <https://riot.python.sk/#/room/#general:python.sk>`_
+
+Licencia 
+--------
+
+MIT licencia pre kód (GitHub repo), CC-BY pre ostatný obsah (pokiaľ nie je stanovené ináč). Viac informácií o licenciách je v súbore LICENSE.
+
+-----------------
+
 Python SK Website
 #################
 
@@ -59,3 +122,4 @@ License
 -------
 
 MIT license for code (GitHub repo), CC-BY for content (if not stated otherwise). For more detail read the LICENSE file.
+
