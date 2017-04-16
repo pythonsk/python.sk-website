@@ -1,7 +1,7 @@
 Python SK Website
 #################
 
-Python SK Website, built with Flask from which static HTML is generated.
+`Python SK Website <https://www.python.sk>`_, built with `Flask <http://flask.pocoo.org/>`_ from which static HTML is generated.
 
 
 Contributing
@@ -51,8 +51,8 @@ If you find some bug please do report it! Feel free to submit suggestions as wel
 Links
 -----
 
-- web: https://www.python.sk
-- chat: https://riot.python.sk/#/room/#general:python.sk
+- web: `https://www.python.sk <https://www.python.sk/>`_
+- chat: `https://riot.python.sk <https://riot.python.sk/#/room/#general:python.sk>`_
 
 
 License
