@@ -13,11 +13,9 @@ Od komunity pre komunity. Príspevky su viac než vítané. Prečítaj si našu 
 Štruktúra projektu
 ------------------
 
-**3 branche**:
+**1 branch**:
 
 - ``master`` - Flask aplikácia, šablony, statické súbory.
-- ``staging`` - statické HTML, generované z aplikácie v ``master`` branch (nerobte zmeny v tejto branchi).
-- ``live`` - statické HTML, vytvorené publikovaním zmien zo ``staging`` branche do ``live`` branche (nerobte zmeny v tejto branchi)
 
 Inštalácia
 ----------
