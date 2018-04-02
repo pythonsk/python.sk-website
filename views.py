@@ -33,8 +33,8 @@ LDJSON = {
     "@context": "http://schema.org",
     "@type": "Organization",
     "name": "SPy o.z.",
-    "url": "https://www.python.sk",
-    "logo": "https://www.python.sk/",
+    "url": "https://python.sk",
+    "logo": "https://python.sk/static/img/logo/python.svg",
     "sameAs": [
         "https://facebook.com/pyconsk",
         "https://twitter.com/pyconsk",
@@ -61,7 +61,7 @@ def get_locale():
 
 def _get_template_variables(**kwargs):
     variables = {
-        'title': gettext('PyCon SK'),
+        'title': gettext('Python.SK'),
         'logo': LOGO_PYCON,
         'ld_json': LDJSON
     }
@@ -94,6 +94,11 @@ def landing_index():
     return render_template('index.html', **template_variables)
 
 
+@app.route('/CNAME')
+def gh_cname():
+    return 'python.sk'
+
+
 @app.route('/<lang_code>/index.html')
 def index():
     return render_template('index.html', **_get_template_variables(li_index='active'))
@@ -116,7 +121,7 @@ def get_lastmod(route, sitemap_entry):
 @app.route('/sitemap.xml', methods=['GET'])
 def sitemap():
     """Generate sitemap.xml. Makes a list of urls and date modified."""
-    domain = 'https://www.python.sk'
+    domain = 'https://python.sk'
     pages = []
 
     # static pages
