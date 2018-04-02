@@ -36,10 +36,10 @@ LDJSON = {
     "url": "https://www.python.sk",
     "logo": "https://www.python.sk/",
     "sameAs": [
-      "https://facebook.com/pyconsk",
-      "https://twitter.com/pyconsk",
-      "https://www.linkedin.com/company/spy-o--z-",
-      "https://github.com/pyconsk",
+        "https://facebook.com/pyconsk",
+        "https://twitter.com/pyconsk",
+        "https://www.linkedin.com/company/spy-o--z-",
+        "https://github.com/pyconsk",
     ]
 }
 
@@ -48,8 +48,6 @@ LDJSON = {
 def before():
     if request.view_args and 'lang_code' in request.view_args:
         g.current_lang = request.view_args['lang_code']
-        if request.view_args['lang_code'] not in LANGS:
-            return abort(404)
         request.view_args.pop('lang_code')
 
 
@@ -71,6 +69,9 @@ def _get_template_variables(**kwargs):
 
     if 'current_lang' in g:
         variables['lang_code'] = g.current_lang
+
+        if g.current_lang not in LANGS:
+            return abort(404)
     else:
         variables['lang_code'] = app.config['BABEL_DEFAULT_LOCALE']
 
@@ -112,41 +113,44 @@ def sitemap():
 
     # static pages
     for rule in app.url_map.iter_rules():
-        if "GET" in rule.methods:
-            if len(rule.arguments) == 0:
-                indx = rule.rule.replace('/', '')
+
+        if "GET" not in rule.methods:
+            raise Exception
+
+        if rule.arguments == set():
+            indx = rule.rule.replace('/', '')
+            sitemap_data = SITEMAP.get(indx, SITEMAP_DEFAULT)
+            pages.append({
+                'loc': domain + rule.rule,
+                'lastmod': get_lastmod(rule, sitemap_data),
+                'freq': sitemap_data['freq'],
+                'prio': sitemap_data['prio'],
+            })
+
+        elif 'lang_code' in rule.arguments:
+            indx = rule.rule.replace('/<lang_code>/', '')
+
+            for lang in LANGS:
+                alternate = []
+
+                for alt_lang in LANGS:
+                    if alt_lang != lang:
+                        alternate.append({
+                            'lang': alt_lang,
+                            'url': domain + rule.rule.replace('<lang_code>', alt_lang)
+                        })
+
                 sitemap_data = SITEMAP.get(indx, SITEMAP_DEFAULT)
                 pages.append({
-                    'loc': domain + rule.rule,
+                    'loc': domain + rule.rule.replace('<lang_code>', lang),
+                    'alternate': alternate,
                     'lastmod': get_lastmod(rule, sitemap_data),
                     'freq': sitemap_data['freq'],
                     'prio': sitemap_data['prio'],
                 })
 
-            elif 'lang_code' in rule.arguments:
-                indx = rule.rule.replace('/<lang_code>/', '')
-
-                for lang in LANGS:
-                    alternate = []
-
-                    for alt_lang in LANGS:
-                        if alt_lang != lang:
-                            alternate.append({
-                                'lang': alt_lang,
-                                'url': domain + rule.rule.replace('<lang_code>', alt_lang)
-                            })
-
-                    sitemap_data = SITEMAP.get(indx, SITEMAP_DEFAULT)
-                    pages.append({
-                        'loc': domain + rule.rule.replace('<lang_code>', lang),
-                        'alternate': alternate,
-                        'lastmod': get_lastmod(rule, sitemap_data),
-                        'freq': sitemap_data['freq'],
-                        'prio': sitemap_data['prio'],
-                    })
-
     sitemap_xml = render_template('sitemap_template.xml', pages=pages)
-    response= make_response(sitemap_xml)
+    response = make_response(sitemap_xml)
     response.headers["Content-Type"] = "application/xml"
 
     return response
