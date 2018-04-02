@@ -79,6 +79,14 @@ def _get_template_variables(**kwargs):
 
 
 @app.route('/')
+def landing_page():
+    template_variables = _get_template_variables(li_index='active')
+    template_variables['redirect_url'] = '/%s' % app.config['BABEL_DEFAULT_LOCALE']
+
+    return render_template('index.html', **template_variables)
+
+
+@app.route('/index.html')
 def landing_index():
     template_variables = _get_template_variables(li_index='active')
     template_variables['redirect_url'] = '/%s/index.html' % app.config['BABEL_DEFAULT_LOCALE']
@@ -117,17 +125,7 @@ def sitemap():
         if "GET" not in rule.methods:
             raise Exception
 
-        if rule.arguments == set():
-            indx = rule.rule.replace('/', '')
-            sitemap_data = SITEMAP.get(indx, SITEMAP_DEFAULT)
-            pages.append({
-                'loc': domain + rule.rule,
-                'lastmod': get_lastmod(rule, sitemap_data),
-                'freq': sitemap_data['freq'],
-                'prio': sitemap_data['prio'],
-            })
-
-        elif 'lang_code' in rule.arguments:
+        if 'lang_code' in rule.arguments:
             indx = rule.rule.replace('/<lang_code>/', '')
 
             for lang in LANGS:
@@ -148,10 +146,19 @@ def sitemap():
                     'freq': sitemap_data['freq'],
                     'prio': sitemap_data['prio'],
                 })
+        elif rule.rule == '/sitemap.xml':
+            indx = rule.rule.replace('/', '')
+            sitemap_data = SITEMAP.get(indx, SITEMAP_DEFAULT)
+            pages.append({
+                'loc': domain + rule.rule,
+                'lastmod': get_lastmod(rule, sitemap_data),
+                'freq': sitemap_data['freq'],
+                'prio': sitemap_data['prio'],
+            })
 
     sitemap_xml = render_template('sitemap_template.xml', pages=pages)
     response = make_response(sitemap_xml)
-    response.headers["Content-Type"] = "application/xml"
+    response.headers["Content-Type"] = "text/xml"
 
     return response
 
