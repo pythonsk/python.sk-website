@@ -1,20 +1,38 @@
 {% extends "body.html" %}
 
 {% block content %}
+  <section class="jumbotron text-center">
     <div class="container">
+      <img src="{{ url_for('static', filename='img/logo/python.svg') }}">
+      <p class="lead text-muted">
+        {{ _('Python je moderný programovací jazyk. Je univerzálny poháňa weby, ale aj robotov.') }}
+        {{ _('Je výborný pre vyučovanie programovania.') }}
+      </p>
+      <p class="lead text-muted">
+        {{ _('Komunita na slovensku je  mladá a aktívna. Najdeš tu pomoc, kamarátov, alebo aj prácu.')  }}
+        <strong>{{ _('Vitaj medzi nami.') }}</strong>
+      </p>
+    </div>
+  </section>
 
-      <div class="starter-template">
-        <h1>Python.sk</h1>
-        <p class="lead">
-        Na Aprílovom meetupe sa povenujeme doméne python.sk<br />
-
-        Čo a ako by sme s ňou mali robiť, takisto sú vítané návrhy na projekty na tejto doméne.<br />
-
-        Pre začiatok budeme používať Flask a preto si urobíme malé intro do tohoto jednoduchého Frameworku.<br />
-
-        Viac: <a href="https://www.meetup.com/pyconsk/events/238855049/">19. Bratislavský Python Meetup</a>
-        </p>
-      </div>
-
-    </div><!-- /.container -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4">
+        <h2>{{ _('Zapoj sa!') }}</h2>
+        <p>{{ _('Pomôž nám rozšíriť Python na Slovensku. Pro leňochov s peniazmi máme číslo účtu, ale viac oceníme, keď sa chopíš niektorej úlohy a dokončíš ju do konca. Večná sláva zaručená!') }}</p>
+        <p><a class="btn btn-secondary" href="#" role="button">{{ _('Chcem byť večne slávny') }} &raquo;</a></p>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4">
+        <h2>{{ _('Pre začiatočníkov') }}</h2>
+        <p>{{ _('Základy Pythonu sa dajú naučiť aj z prehliadača. Pripravujeme pre teba odkazy na výukové hry, online kurzy, videa, články, knihy a iné...') }}</p>
+        <p><a class="btn btn-secondary" href="#" role="button">{{ _('Prahnem po vzdelaní') }} &raquo;</a></p>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4">
+        <h2>{{ _('PyCon SK') }}</h2>
+        <p>{{ _('Slovenská Python konferencia! Pomôž nám s prípravami, propagáciou, skús si prihlásiť prednášku, či workshop. Sponzoruj nás, alebo len príď a uži si akciu!') }}.</p>
+        <p><a class="btn btn-secondary" href="https://www.pycon.sk" target="_blank" role="button">{{ _('Hurá konfera') }} &raquo;</a></p>
+      </div><!-- /.col-lg-4 -->
+    </div><!-- /.row -->
+    <hr class="featurette-divider">
+  </div><!-- /.container -->
 {% endblock %}
