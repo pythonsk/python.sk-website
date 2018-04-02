@@ -6,18 +6,16 @@
     <meta name="description" content="">
     <meta name="author" content="SPy o.z.">
     <link rel="icon" href="{{ url_for('static', filename='img/logo/favicon.ico') }}" sizes="16x16">
-
     <title>{{ title }}</title>
-
     <link href="{{ url_for('static', filename='bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
     <link href="{{ url_for('static', filename='css/python.css') }}" rel="stylesheet">
-
     {% if lang_code == 'sk' %}
     <link rel="alternate" href="https://python.sk{{ request.path|replace('/'+lang_code, '/en', 1) }}" hreflang="en">
     {% else %}
     <link rel="alternate" href="https://python.sk{{ request.path|replace('/'+lang_code, '/sk', 1) }}" hreflang="sk">
     {% endif %}
     <link rel="canonical" href="https://python.sk{{ request.path }}"/>
+    {% if redirect_url %}<meta http-equiv="refresh" content="0; URL='{{ redirect_url }}'" />{% endif %}
   </head>
 
   <body>

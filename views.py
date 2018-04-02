@@ -77,6 +77,14 @@ def _get_template_variables(**kwargs):
     return variables
 
 
+@app.route('/')
+def landing_index():
+    template_variables = _get_template_variables(li_index='active')
+    template_variables['redirect_url'] = '/%s/index.html' % app.config['BABEL_DEFAULT_LOCALE']
+
+    return render_template('index.html', **template_variables)
+
+
 @app.route('/<lang_code>/index.html')
 def index():
     return render_template('index.html', **_get_template_variables(li_index='active'))
