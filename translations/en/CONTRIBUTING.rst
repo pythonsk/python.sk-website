@@ -1,7 +1,7 @@
 Contributors Guide
 ========================
 
-`Switch CONTRIBUTING.rst to English <https://github.com/pythonsk/python.sk-website/blob/master/translations/en/CONTRIBUTING.rst>`_
+`Zobraziť CONTRIBUTING.rst v Slovenčine <https://github.com/pythonsk/python.sk-website/blob/master/CONTRIBUTING.rst>`_
 
 We are happy with any volunteers involvement in `www.python.sk <https://www.python.sk>`_ website. If you would like to help us, there are multiple ways to do so. Depending on your skills and type of work you would like to do (doesn’t have to be development), we encourage you to start with any of the following:
 
@@ -13,16 +13,17 @@ You can help out by spreading the word about `www.python.sk <https://github.com/
 Update documentation
 -----------------------
 
-`GitHub wiki <https://github.com/pythonsk/python.sk-website/wiki>`_ používame, aby sme usmernili ľudí a developerov. **Momentálne je prázdna, ale nejako začať musíme...** Ak nevieš, ako niečo urobiť, pravdepodobne sme to zabudli zapísať do wiki. Dokumentácia je nekonečný proces, takže vítame akékoľvek návrhy na zlepšenie, a preto pokojne vytváraj "issues" (problémy) v našom issue trackeri.
+`GitHub wiki <https://github.com/pythonsk/python.sk-website/wiki>`_ is used to guide people. **Momentálne je prázdna, ale nejako začať musíme...** Ak nevieš, ako niečo urobiť, pravdepodobne sme to zabudli zapísať do wiki. Dokumentácia je nekonečný proces, takže vítame akékoľvek návrhy na zlepšenie, a preto pokojne vytváraj "issues" (problémy) v našom issue trackeri.
 
 Ak sa ti zdá, že naša dokumentácia by mala byť upravená, alebo se na niečo zabudli, kľudne vytvor "pull request", alebo nás kontaktuj prostedníctvom nášho `verejného chatu <https://riot.python.sk/#/room/#general:python.sk>`_. Alternatively, reach us via email: `info@python.sk <mailto:info@python.sk>`_.
 
 Suggest an improvement or report bug
 --------------------------------------
 
-All issues are handled by `Github issue tracker <https://github.com/pythonsk/python.sk-website/issues>`_, if you've found a bug please create an issue for it.
+All issues are handled by `Github issue tracker <https://github.com/pythonsk/python.sk-website/issues?template=Bug_report.md>`_, if you've found a bug please create an issue for it.
 
-If there is something you are missing, and wish to be implemented in `Github issue tracker <https://github.com/pythonsk/python.sk-website/issues>`_, feel free to create an issue and mark it as an enhancement.
+If there is something you are missing, and wish to be implemented in `Github issue tracker <https://github.com/pythonsk/python.sk-website/issues?template=Feature_request.md>`_, feel free to create an issue and mark it as an enhancement. Ideally you also start to work on the new functionality (don't forget to write that in the issue comment). If you are not sure, wheater the functionality is necessary or you need guidanance with the implementation, get in touch via our `public chat <https://riot.python.sk/#/room/#general:python.sk>`_. Alternatively, reach us via email: `info@python.sk <mailto:info@python.sk>`_. Read more about development below...
+
 
 Update python.sk
 ----------------------
