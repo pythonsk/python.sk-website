@@ -1,7 +1,7 @@
 Contributors Guide
 ========================
 
-`Switch CONTRIBUTING.rst to English <https://github.com/pythonsk/python.sk-website/blob/master/translations/en/CONTRIBUTING.rst>`_
+`Zobraziť CONTRIBUTING.rst v Slovenčine <https://github.com/pythonsk/python.sk-website/blob/master/CONTRIBUTING.rst>`_
 
 We are happy with any volunteers involvement in `www.python.sk <https://www.python.sk>`_ website. If you would like to help us, there are multiple ways to do so. Depending on your skills and type of work you would like to do (doesn’t have to be development), we encourage you to start with any of the following:
 
