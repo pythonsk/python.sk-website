@@ -13,16 +13,16 @@ You can help out by spreading the word about `www.python.sk <https://github.com/
 Update documentation
 -----------------------
 
-`GitHub wiki <https://github.com/pythonsk/python.sk-website/wiki>`_ používame, aby sme usmernili ľudí a developerov. **Momentálne je prázdna, ale nejako začať musíme...** Ak nevieš, ako niečo urobiť, pravdepodobne sme to zabudli zapísať do wiki. Dokumentácia je nekonečný proces, takže vítame akékoľvek návrhy na zlepšenie, a preto pokojne vytváraj "issues" (problémy) v našom issue trackeri.
+`GitHub wiki <https://github.com/pythonsk/python.sk-website/wiki>`_ is used to guide people. **Momentálne je prázdna, ale nejako začať musíme...** Ak nevieš, ako niečo urobiť, pravdepodobne sme to zabudli zapísať do wiki. Dokumentácia je nekonečný proces, takže vítame akékoľvek návrhy na zlepšenie, a preto pokojne vytváraj "issues" (problémy) v našom issue trackeri.
 
 Ak sa ti zdá, že naša dokumentácia by mala byť upravená, alebo se na niečo zabudli, kľudne vytvor "pull request", alebo nás kontaktuj prostedníctvom nášho `verejného chatu <https://riot.python.sk/#/room/#general:python.sk>`_. Alternatively, reach us via email: `info@python.sk <mailto:info@python.sk>`_.
 
 Suggest an improvement or report bug
 --------------------------------------
 
-Všetky issues/problémy sú vedené v `issue trackeri na Githube <https://github.com/pythonsk/python.sk-website/issues?template=Bug_report.md>`_, ak nájdeš bug, prosím vytvor na to issue, kde v krátkosti popíšeš, v čom je problém.
+All issues are handled by `Github issue tracker <https://github.com/pythonsk/python.sk-website/issues?template=Bug_report.md>`_, if you've found a bug please create an issue for it.
 
-Ak je niečo, čo ti chýba a chcel/a by si, aby sme to implementovali, choď do `issue trackera na Githube <https://github.com/pythonsk/python.sk-website/issues?template=Feature_request.md>`_, vytvor issue a označ ju ako "enhancement" = vylepšenie. Ideálne ak na novej funkcionalite začneš aj pracovať (nezabudni to napísať do komentára). Pokiaľ si si neni istý či je funkcionality potrebná, alebo potrebuješ poradiť s implementáciou, kontaktuj prostedníctvom nášho `verejného chatu <https://riot.python.sk/#/room/#general:python.sk>`_. Alternatively, reach us via email: `info@python.sk <mailto:info@python.sk>`_. Viac o vývoji sa dočítaš nižšie...
+If there is something you are missing, and wish to be implemented in `Github issue tracker <https://github.com/pythonsk/python.sk-website/issues?template=Feature_request.md>`_, feel free to create an issue and mark it as an enhancement. Ideally you also start to work on the new functionality (don't forget to write that in the issue comment). If you are not sure, wheater the functionality is necessary or you need guidanance with the implementation, get in touch via our `public chat <https://riot.python.sk/#/room/#general:python.sk>`_. Alternatively, reach us via email: `info@python.sk <mailto:info@python.sk>`_. Read more about development below...
 
 
 Update python.sk
@@ -72,4 +72,4 @@ Development methodology
 7. In case reviewer asks for changes you can do all the things mentioned in point 5. Once happy with the changes make a note in the pull request to review again.
 8. Your feature is approved and merged to master of upstream, so you can check out the master at your local copy: ``git checkout master`` and pull the newly approved changes from upstream ``git pull upstream master``. Pull from upstream will download your work (as one commit into master) that has been done in a branch. Now you can delete your local branch ``git branch --delete XX-new-feature``, and also remote one ``git push origin :XX-new-feature``
 
-Seems complicated? Don't worry once you start using this setup you will find out that it is easy to get to used to. Besides similar setup is used in almost all large open source projects, and you might find a similar setup in corporate environments as well. If you feel lost jump into our `public chat <https://riot.python.sk/#/room/#general:python.sk>`_ and ask for help. Kontaktovať nás môžeš aj emailom: `info@python.sk <mailto:info@python.sk>`_.
+Seems complicated? Don't worry once you start using this setup you will find out that it is easy to get to used to. Besides similar setup is used in almost all large open source projects, and you might find a similar setup in corporate environments as well. If you feel lost jump into our `public chat <https://riot.python.sk/#/room/#general:python.sk>`_ and ask for help. Alternatively, reach us via email: `info@python.sk <mailto:info@python.sk>`_.
