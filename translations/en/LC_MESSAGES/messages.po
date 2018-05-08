@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: pythonsk-website\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2018-05-08 21:49+0200\n"
-"PO-Revision-Date: 2018-05-08 16:28-0400\n"
+"PO-Revision-Date: 2018-05-08 16:43-0400\n"
 "Last-Translator: RicCo386 <richard.kellner@pycon.sk>\n"
 "Language: en\n"
 "Language-Team: English\n"
@@ -19,7 +19,7 @@ msgstr ""
 
 #: views.py:64
 msgid "Python.SK"
-msgstr ""
+msgstr "Python.SK"
 
 #: templates/body.html:28
 msgid "Python.SK spravuje SPy o.z."
