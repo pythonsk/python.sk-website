@@ -23,7 +23,7 @@ Project structure
 **Directories**
 
 - ``root`` - Flask app is in root directory.
-- ``docs`` - Generated static `website www.python.sk <https://www.python.sk>`_. Do not edit files in this directory, they will be regenerated! Read below how to generate.
+- ``docs`` - Generated static `website www.python.sk <https://www.python.sk>`_. **Neditujte súbory v tomto adresáry, lebo budú pregenerované!** Postup na vygenerovanie je popísany nižšie.
 
 
 Installation
@@ -44,7 +44,7 @@ We use Python 3 for development. Commands are made for terminal in Linux, and sh
 
     source envs3/bin/activate
 
-- install requirements::
+- Nainštalujeme závislosti::
 
     pip install -r requirements.txt
 
@@ -53,8 +53,7 @@ We use Python 3 for development. Commands are made for terminal in Linux, and sh
     python views.py
 
 
-If you find some bug please do report it! Create an issue on our GitHub. Feel free to submit suggestions via GitHub issues as well, or join us in our public chat
-`<https://riot.python.sk/#/room/#general:python.sk>`_ or send us an email: `info@python.sk <mailto:info@python.sk>`_.
+If you find some bug please do report it! Vytvorte prosím `issue na GitHube <https://github.com/pythonsk/python.sk-website/issues?template=Bug_report.md>`_. Ak máte nápad na zlepšenie, môžete vytvoriť `issue na GitHube <https://github.com/pythonsk/python.sk-website/issues?template=Feature_request.md>`_, prípadne nás navštívte na našom `verejnom chate <https://riot.python.sk/#/room/#general:python.sk>`_, alebo nám napíšte email: `info@python.sk <mailto:info@python.sk>`_.
 
 
 Translations
