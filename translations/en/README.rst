@@ -3,14 +3,14 @@ Python SK website
 
 .. image:: https://d322cqt584bo4o.cloudfront.net/pythonsk-website/localized.svg
 
-`Switch README.rst to English <https://github.com/pythonsk/python.sk-website/blob/master/translations/en/README.rst>`_
+`Zobraziť README.rst v Slovenčine <https://github.com/pythonsk/python.sk-website/blob/master/README.rst>`_
 
-Webová stranka `www.python.sk <https://www.python.sk>`_, založená na frameworku `Flask <http://flask.pocoo.org/>`_, z ktorého sa vygeneruje statické HTML.
+Website `python.sk <https://www.python.sk>`_, built with `Flask <http://flask.pocoo.org/>`_ from which static HTML is generated.
 
 Contributing
 -----------
 
-From community to the community. Website is managed by volunteers and we'll be happy if you'll join us. Contributions are welcome. Prečítaj si našu `prispievateľskú príručku <https://github.com/pythonsk/python.sk-website/blob/master/CONTRIBUTING.rst>`_ a pridaj sa k nám!
+From community to the community. Website is managed by volunteers and we'll be happy if you'll join us. Contributions are welcome. Read our `contribution guide <https://github.com/pythonsk/python.sk-website/blob/master/translations/en/CONTRIBUTING.rst>`_ and feel free to join, we would love to hear from you!
 
 
 Project structure
@@ -23,7 +23,7 @@ Project structure
 **Directories**
 
 - ``root`` - Flask app is in root directory.
-- ``docs`` - Vygenerovaná statická `webová stranka www.python.sk <https://www.python.sk>`_. Do not edit files in this directory, they will be regenerated! Read below how to generate.
+- ``docs`` - Generated static `website www.python.sk <https://www.python.sk>`_. Do not edit files in this directory, they will be regenerated! Read below how to generate.
 
 
 Installation
