@@ -20,9 +20,10 @@ Ak sa ti zdá, že naša dokumentácia by mala byť upravená, alebo se na nieč
 Navrhuj zlepšenia alebo oznamuj chyby
 --------------------------------------
 
-Všetky issues/problémy sú vedené v `issue trackeri na Githube <https://github.com/pythonsk/python.sk-website/issues>`_, ak nájdeš bug, prosím vytvor na to issue, kde v krátkosti popíšeš, v čom je problém.
+Všetky issues/problémy sú vedené v `issue trackeri na Githube <https://github.com/pythonsk/python.sk-website/issues?template=Bug_report.md>`_, ak nájdeš bug, prosím vytvor na to issue, kde v krátkosti popíšeš, v čom je problém.
 
-Ak je niečo, čo ti chýba a chcel/a by si, aby sme to implementovali, choď do `issue trackera na Githube <https://github.com/pythonsk/python.sk-website/issues>`_, vytvor issue a označ ju ako "enhancement" = vylepšenie.
+Ak je niečo, čo ti chýba a chcel/a by si, aby sme to implementovali, choď do `issue trackera na Githube <https://github.com/pythonsk/python.sk-website/issues?template=Feature_request.md>`_, vytvor issue a označ ju ako "enhancement" = vylepšenie. Ideálne ak na novej funkcionalite začneš aj pracovať (nezabudni to napísať do komentára). Pokiaľ si si neni istý či je funkcionality potrebná, alebo potrebuješ poradiť s implementáciou, kontaktuj prostedníctvom nášho `verejného chatu <https://riot.python.sk/#/room/#general:python.sk>`_. Kontaktovať nás môžeš aj emailom: `info@python.sk <mailto:info@python.sk>`_. Viac o vývoji sa dočítaš nižšie...
+
 
 Aktualizuj python.sk
 ----------------------
