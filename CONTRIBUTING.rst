@@ -15,7 +15,7 @@ Aktualizuj dokumentáciu
 
 `GitHub wiki <https://github.com/pythonsk/python.sk-website/wiki>`_ používame, aby sme usmernili ľudí a developerov. **Momentálne je prázdna, ale nejako začať musíme...** Ak nevieš, ako niečo urobiť, pravdepodobne sme to zabudli zapísať do wiki. Dokumentácia je nekonečný proces, takže vítame akékoľvek návrhy na zlepšenie, a preto pokojne vytváraj "issues" (problémy) v našom issue trackeri.
 
-Ak sa ti zdá, že naša dokumentácia by mala byť upravená, alebo se na niečo zabudli, kľudne vytvor "pull request", alebo nás kontaktuj prostedníctvom nášho `verejného chatu <https://riot.python.sk/#/room/#general:python.sk>`_.
+Ak sa ti zdá, že naša dokumentácia by mala byť upravená, alebo se na niečo zabudli, kľudne vytvor "pull request", alebo nás kontaktuj prostedníctvom nášho `verejného chatu <https://riot.python.sk/#/room/#general:python.sk>`_. Kontaktovať nás môžeš aj emailom: `info@python.sk <mailto:info@python.sk>`_.
 
 Navrhuj zlepšenia alebo oznamuj chyby
 --------------------------------------

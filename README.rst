@@ -1,11 +1,11 @@
-www.python.sk webstránka
-########################
+Python SK webstránka
+####################
 
 .. image:: https://d322cqt584bo4o.cloudfront.net/pythonsk-website/localized.svg
 
 `Switch README.rst to English <https://github.com/pythonsk/python.sk-website/blob/master/translations/en/README.rst>`_
 
-`Webová stranka www.python.sk <https://www.python.sk>`_, založená na frameworku `Flask <http://flask.pocoo.org/>`_, z ktorého sa vygeneruje statické HTML.
+Webová stranka `www.python.sk <https://www.python.sk>`_, založená na frameworku `Flask <http://flask.pocoo.org/>`_, z ktorého sa vygeneruje statické HTML.
 
 Ako pomôct?
 -----------
