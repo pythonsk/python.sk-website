@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: pythonsk-website\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2018-05-08 21:49+0200\n"
-"PO-Revision-Date: 2018-05-08 16:18-0400\n"
+"PO-Revision-Date: 2018-05-08 16:28-0400\n"
 "Last-Translator: RicCo386 <richard.kellner@pycon.sk>\n"
 "Language: en\n"
 "Language-Team: English\n"
@@ -27,7 +27,10 @@ msgstr ""
 
 #: templates/body.html:30
 msgid "Poslaním občianskeho združenia SPy (skratka \"Slovak Python\") je podpora vývojárov a používateľov programovacieho jazyka Python. Podporujeme a šírime používanie programovacieho jazyka Python a iných open source technológii a open source myšlienok v našej spoločnosti."
-msgstr ""
+msgstr "The mission of the SPy civic association (SPy is the abbreviation of \"Slovak Python\", or sometimes we say\n"
+"        \"Slovak Python User Group\") is to support developers and users of the Python programming language. We support\n"
+"        and we spread the programming language Python and other open source technologies and open source ideas in our\n"
+"        society."
 
 #: templates/body.html:33
 msgid "Viac o nás nájdete na stránke našeho občianskeho združenia:"
@@ -35,7 +38,7 @@ msgstr ""
 
 #: templates/body.html:33
 msgid "webstránka SPy o.z."
-msgstr ""
+msgstr "SPy o.z. website"
 
 #: templates/body.html:37
 msgid "Nájdeš nás aj tu:"
@@ -47,7 +50,7 @@ msgstr ""
 
 #: templates/body.html:71
 msgid "Späť na začiatok"
-msgstr ""
+msgstr "Back to top"
 
 #: templates/body.html:73
 msgid "Stránky spravuje občianské združenie SPy. Píšte na info@python.sk, tweetujte na @pyconsk. "
@@ -59,7 +62,7 @@ msgstr ""
 
 #: templates/body.html:77
 msgid "Upraviť túto stránku"
-msgstr ""
+msgstr "Modify this site"
 
 #: templates/index.html:8
 msgid "Python je moderný programovací jazyk. Je univerzálny poháňa weby, ale aj robotov."
@@ -103,7 +106,7 @@ msgstr ""
 
 #: templates/index.html:31
 msgid "PyCon SK"
-msgstr ""
+msgstr "PyCon SK"
 
 #: templates/index.html:32
 msgid "Slovenská Python konferencia! Pomôž nám s prípravami, propagáciou, skús si prihlásiť prednášku, či workshop. Sponzoruj nás, alebo len príď a uži si akciu!"
