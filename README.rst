@@ -1,13 +1,16 @@
-Python SK webstránka
-#####################
+www.python.sk webstránka
+########################
 
-`Webová stranka Python SK <https://www.python.sk>`_, založená na frameworku `Flask <http://flask.pocoo.org/>`_, z ktorého sa vygeneruje statické HTML.
+.. image:: https://d322cqt584bo4o.cloudfront.net/pythonsk-website/localized.svg
 
+`Switch README.rst to English <https://github.com/pythonsk/python.sk-website/blob/master/translations/en/README.rst>`_
+
+`Webová stranka www.python.sk <https://www.python.sk>`_, založená na frameworku `Flask <http://flask.pocoo.org/>`_, z ktorého sa vygeneruje statické HTML.
 
 Ako pomôct?
 -----------
 
-Od komunity pre komunity. Príspevky su viac než vítané. Prečítaj si našu `prispievateľskú príručku <https://github.com/pyconsk/www.python.sk/blob/master/doc/contributing.rst>`_ a pridaj sa k nám, radi budeme o tebe počuť!
+Od komunity pre komunitu. Stránka je spravovaná dobrovoľníkmi a budeme veľmi radi keď sa pridáš. Príspevky su viac než vítané. Prečítaj si našu `prispievateľskú príručku <https://github.com/pythonsk/python.sk-website/blob/master/CONTRIBUTING.rst>`_ a pridaj sa k nám!
 
 
 Štruktúra projektu
@@ -17,17 +20,25 @@ Od komunity pre komunity. Príspevky su viac než vítané. Prečítaj si našu 
 
 - ``master`` - Flask aplikácia, šablony, statické súbory.
 
+**Adresare**
+
+- ``root`` - Flask aplikácia je koreňovom adresáry.
+- ``docs`` - Vygenerovaná statická `webová stranka www.python.sk <https://www.python.sk>`_. Neditujte súbory v tomto adresáry, lebo budú pregenerované! Postup na vygenerovanie je popísany nižšie.
+
+
 Inštalácia
 ----------
 
+Pre vývoj používame Python 3. Príkazy su pre terminál v Linuxe, ale mali by fungovať aj pre Mac OS.
+
 - Naklonujeme si repozitár lokálne ku sebe::
 
-    git clone https://github.com/pyconsk/www.python.sk.git
-    cd python.sk
+    git clone https://github.com/pythonsk/python.sk-website
+    cd python.sk-website
 
-- Vytvoríme si Python virtualné prostredie (pyvenv je súčasť Python 3) a nainštalujeme všetky potrebné závislosti::
+- Vytvoríme si Python virtualné prostredie (modul venv je súčasť Python 3) a nainštalujeme všetky potrebné závislosti::
 
-    pyvenv envs3
+    python3 -m venv envs3
 
 - Aktivujeme Python virtuálne prostredie::
 
@@ -35,89 +46,52 @@ Inštalácia
 
 - Nainsštalujeme závislosti::
 
-    pip install -r doc/requirements.txt
+    pip install -r requirements.txt
 
 - Spustíme Flask server a prípadne otvoríme vo webovom prehliadači (http://127.0.0.1:5000)::
 
     python views.py
 
 
-Pokiaľ nájdete chyby, prosím nahláste ich! Taktiež uvítame podnety od Vás, prípadne nás navštívte na našom verejnom chate
-`<https://riot.python.sk/#/room/#general:python.sk>`_.
+Pokiaľ nájdete chyby, prosím nahláste ich! Vytvorte prosím issue na GitHube. Ak máte nápad na zlepšenie, môžete vytvoriť issue na GitHube, prípadne nás navštívte na našom verejnom chate
+`<https://riot.python.sk/#/room/#general:python.sk>`_, alebo nám napíšte email: `info@python.sk <mailto:info@python.sk>`_.
+
+
+Preklady
+--------
+
+Pomôžte nám preložiť stránku do cudzích jazykov. Na preklad nemusíte mať žiadnu znalosť programovania, stačí vedieť iba cudzí jazyk. Preklad zabezpečujeme pomocou služby `crowdin.com <https://crowdin.com/project/pythonsk-website>`_.
+
+
+Vygenerujeme statickú stránku
+-----------------------------
+
+`Frozen-Flask <https://pythonhosted.org/Frozen-Flask/>`_ "zamrzne" Flask aplikáciu do statických súborov. Výsledok môže byť uložený na servery a zobrazovanú iba pomocou klasického web serveru.
+
+- vygenerujeme statickú stránku, výsledok je uložený v ``docs`` adresáry::
+
+    python freezer.py
+
+- preveríme výsledok v prehliladači (http://127.0.0.1:8000/en/index.html)::
+
+    cd docs
+    python -m SimpleHTTPServer 8000
+
+
+Continuous Deployment
+---------------------
+
+Všetko čo sa dostane to master vetvy (branch) je automaticky zobrazené na servery. Zobrazuje sa iba vygenerovaná statická stránka ktorá je v ``docs`` adresáry.
 
 
 Webové odkazy
 -------------
 
-- web: `https://www.python.sk <https://www.python.sk/>`_
+- web: `https://www.python.sk <https://www.python.sk/>`_, `https://www.micropython.sk <https://www.micropython.sk/>`_, `https://www.microbit.sk <https://www.microbit.sk/>`_
 - chat: `https://riot.python.sk <https://riot.python.sk/#/room/#general:python.sk>`_
+- email: `info@python.sk <mailto:info@python.sk>`_
 
 Licencia 
 --------
 
-MIT licencia pre kód (GitHub repo), CC-BY pre ostatný obsah (pokiaľ nie je stanovené ináč). Viac informácií o licenciách je v súbore LICENSE.
-
------------------
-
-Python SK Website
-#################
-
-`Python SK Website <https://www.python.sk>`_, built with `Flask <http://flask.pocoo.org/>`_ from which static HTML is generated.
-
-
-Contributing
-------------
-
-From community to the community. Contributions are welcome. Read our `contribution guide <https://github.com/pyconsk/www.python.sk/blob/master/doc/contributing.rst>`_ and feel free to join, we would love to hear from you.
-
-
-Project structure
------------------
-
-**3 branches**:
-
-- ``master`` - the Flask app, templates, static files.
-- ``staging`` - static HTML, generated from the app in ``master`` branch (do NOT edit anything in here).
-- ``live`` - static HTML, created by pushing the ``staging`` branch into ``live`` branch (do NOT edit anything in here).
-
-
-Installation
-------------
-
-- clone repository locally::
-
-    git clone https://github.com/pyconsk/www.python.sk.git
-    cd python.sk
-
-- creates a virtual environment (pyvenv is part of Python 3) and installs all requirements::
-
-    pyvenv envs3
-
-- activate virtual environments::
-
-    source envs3/bin/activate
-
-- install requirements::
-
-    pip install -r doc/requirements.txt
-
-- start flask server, and you can view it in browser (http://127.0.0.1:5000)::
-
-    python views.py
-
-
-If you find some bug please do report it! Feel free to submit suggestions as well, or join us in our `public chat <https://riot.python.sk/#/room/#general:python.sk>`_.
-
-
-Links
------
-
-- web: `https://www.python.sk <https://www.python.sk/>`_
-- chat: `https://riot.python.sk <https://riot.python.sk/#/room/#general:python.sk>`_
-
-
-License
--------
-
-MIT license for code (GitHub repo), CC-BY for content (if not stated otherwise). For more detail read the LICENSE file.
-
+MIT licencia pre kód (GitHub repo), CC-BY pre ostatný obsah (pokiaľ nie je stanovené ináč). Viac informácií o licenciách je v súbore LICENSE (iba po anglicky).
