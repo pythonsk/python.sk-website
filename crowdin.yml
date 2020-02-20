@@ -1,7 +1,0 @@
-files:
-  - source: /translations/en/LC_MESSAGES/messages.po
-    translation: /translations/%two_letters_code%/LC_MESSAGES/%original_file_name%
-  - source: /README.rst
-    translation: /translations/%two_letters_code%/%file_name%.%file_extension%
-  - source: /CONTRIBUTING.rst
-    translation: /translations/%two_letters_code%/%file_name%.%file_extension%

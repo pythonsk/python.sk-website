@@ -3,7 +3,7 @@
 import os
 from datetime import datetime
 from flask import Flask, g, request, render_template, abort, make_response
-from flask_babel import Babel, gettext
+from flask_babel import Babel
 
 app = Flask(__name__, static_url_path='/static')
 app.config['BABEL_DEFAULT_LOCALE'] = 'sk'
@@ -61,7 +61,7 @@ def get_locale():
 
 def _get_template_variables(**kwargs):
     variables = {
-        'title': gettext('Python.SK'),
+        'title': 'Python.SK',
         'logo': LOGO_PYCON,
         'ld_json': LDJSON
     }
@@ -81,41 +81,58 @@ def _get_template_variables(**kwargs):
 @app.route('/')
 def landing_page():
     template_variables = _get_template_variables(li_index='active')
-    template_variables['redirect_url'] = '/%s' % app.config['BABEL_DEFAULT_LOCALE']
+    template_variables['title'] += " - Slovak Python User Group"
 
     return render_template('index.html', **template_variables)
 
-
-@app.route('/index.html')
-def landing_index():
+@app.route('/daruj/')
+def daruj_page():
     template_variables = _get_template_variables(li_index='active')
-    template_variables['redirect_url'] = '/%s/index.html' % app.config['BABEL_DEFAULT_LOCALE']
+    template_variables['title'] += " - Daruj"
 
-    return render_template('index.html', **template_variables)
+    return render_template('daruj.html', **template_variables)
+
+@app.route('/o_nas/')
+def o_nas_page():
+    template_variables = _get_template_variables(li_index='active')
+    template_variables['title'] += " - O nás"
+
+    return render_template('o_nas.html', **template_variables)
+
+@app.route('/ucimepython/')
+def ucimepython_page():
+    template_variables = _get_template_variables(li_index='active')
+    template_variables['title'] += " - Učíme Python"
+
+    return render_template('ucimepython.html', **template_variables)
+
+@app.route('/zapojsa/')
+def zapojsa_page():
+    template_variables = _get_template_variables(li_index='active')
+    template_variables['title'] += " - Zapoj sa!"
+
+    return render_template('zapojsa.html', **template_variables)
+
+
+@app.route('/navody/')
+def navody_page():
+    template_variables = _get_template_variables(li_index='active')
+    template_variables['title'] += " - Python návody"
+
+    return render_template('navody.html', **template_variables)
+
+
+@app.route('/blog/')
+def blog_page():
+    template_variables = _get_template_variables(li_index='active')
+    template_variables['title'] += " - Blog!"
+
+    return render_template('blog.html', **template_variables)
 
 
 @app.route('/CNAME')
 def gh_cname():
     return 'python.sk'
-
-
-@app.route('/<lang_code>/index.html')
-def index():
-    return render_template('index.html', **_get_template_variables(li_index='active'))
-
-
-def get_lastmod(route, sitemap_entry):
-    """Used by sitemap() below"""
-    if 'lastmod' in sitemap_entry:
-        return sitemap_entry['lastmod']
-
-    template = route.rule.split('/')[-1]
-    template_file = os.path.join(SRC_DIR, 'templates', template)
-
-    if os.path.exists(template_file):
-        return get_mtime(template_file)
-
-    return NOW
 
 
 @app.route('/sitemap.xml', methods=['GET'])
@@ -147,7 +164,7 @@ def sitemap():
                 pages.append({
                     'loc': domain + rule.rule.replace('<lang_code>', lang),
                     'alternate': alternate,
-                    'lastmod': get_lastmod(rule, sitemap_data),
+                    # 'lastmod': get_lastmod(rule, sitemap_data),
                     'freq': sitemap_data['freq'],
                     'prio': sitemap_data['prio'],
                 })
@@ -156,7 +173,7 @@ def sitemap():
             sitemap_data = SITEMAP.get(indx, SITEMAP_DEFAULT)
             pages.append({
                 'loc': domain + rule.rule,
-                'lastmod': get_lastmod(rule, sitemap_data),
+                # 'lastmod': get_lastmod(rule, sitemap_data),
                 'freq': sitemap_data['freq'],
                 'prio': sitemap_data['prio'],
             })

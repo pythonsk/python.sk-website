@@ -10,10 +10,10 @@ LANGUAGES = (
 freezer = Freezer(app)
 
 
-@freezer.register_generator
-def index():
-    for lang in LANGUAGES:
-        yield lang
+# @freezer.register_generator
+# def index():
+#     for lang in LANGUAGES:
+#         yield lang
 
 if __name__ == '__main__':
     freezer.freeze()

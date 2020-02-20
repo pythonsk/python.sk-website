@@ -9,6 +9,7 @@
     <title>{{ title }}</title>
     <link href="{{ url_for('static', filename='bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
     <link href="{{ url_for('static', filename='css/python.css') }}" rel="stylesheet">
+    <link href="/static/css/font-awesome.min.css" type="text/css" rel="stylesheet">
     {% if lang_code == 'sk' %}
     <link rel="alternate" href="https://python.sk{{ request.path|replace('/'+lang_code, '/en', 1) }}" hreflang="en">
     {% else %}
@@ -21,56 +22,64 @@
   <body>
 
     <header>
-      <div class="collapse bg-dark" id="navbarHeader">
+
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
-          <div class="row">
-            <div class="col-sm-8 col-md-7 py-4">
-              <h4 class="text-white">{{ _('Python.SK spravuje SPy o.z.') }}</h4>
-              <p class="text-muted">
-                {{ _('Poslaním občianskeho združenia SPy (skratka \"Slovak Python\") je podpora vývojárov a používateľov programovacieho jazyka Python. Podporujeme a šírime používanie programovacieho jazyka Python a iných open source technológii a open source myšlienok v našej spoločnosti.') }}
-              </p>
-              <p class="text-muted">
-                {{ _('Viac o nás nájdete na stránke našeho občianskeho združenia:') }} <a href="https://spy.python.sk" title="{{ _('webstránka SPy o.z.') }}" class="text-white">https://spy.python.sk</a>
-              </p>
-            </div>
-            <div class="col-sm-4 offset-md-1 py-4">
-              <h4 class="text-white">{{ _('Nájdeš nás aj tu:') }}</h4>
-              <ul class="list-unstyled">
-                <li><a href="https://twitter.com/pyconsk" class="text-white">Twitter</a></li>
-                <li><a href="https://facebook.com/pyconsk" class="text-white">Facebook</a></li>
-                <li><a href="https://www.linkedin.com/company/spy-o--z-" class="text-white">LinkedIn</a></li>
-                <li><a href="https://plus.google.com/u/0/b/114745643590416178453/114745643590416178453/posts" class="text-white">Google+</a></li>
-                <li><a href="https://github.com/pyconsk" class="text-white">GitHub</a></li>
-                <li><a href="https://riot.python.sk/#/directory" class="text-white">Chat</a></li>
-                <li><a href="mailto:info@python.sk" class="text-white">Email</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="navbar navbar-dark bg-dark box-shadow">
-        <div class="container d-flex justify-content-between">
-          <a href="#" class="navbar-brand d-flex align-items-center">
-            <img src="{{ url_for('static', filename='img/logo/python_logo.svg') }}" class="header-logo" alt="Python logo" />
-            <strong>{{ _('Python na Slovensku') }}</strong>
-          </a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+
+            <a href="{{ url_for('landing_page') }}" class="navbar-brand d-flex align-items-center">
+              <img src="{{ url_for('static', filename='img/logo/python_logo.svg') }}" class="header-logo" alt="Python logo" />
+              <strong>{{ _('Slovak Python User Group') }}</strong>
+            </a>
+
+            <div class="justify-content-end  navbar-collapse" id="navbarNavAltMarkup">
+              <div class="navbar-nav">
+                <ul class="navbar-right navbar-nav justify-content-end">
+                  <li class="nav-item">
+                    <a class="nav-link text-white" href="{{ url_for('blog_page') }}">Blog</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-white" href="{{ url_for('navody_page') }}">Návody</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-white" href="{{ url_for('zapojsa_page') }}">Zapoj sa</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-white" href="{{ url_for('ucimepython_page') }}">Pre učiteľov</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-white" href="{{ url_for('o_nas_page') }}">O nás</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link btn btn-success text-white ml-2 mb-1" href="{{ url_for('daruj_page') }}">Daruj 2%</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link btn btn-primary text-white ml-2 mb-1" href="//forum.python.sk">Fórum ↗</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
         </div>
-      </div>
+      </nav>
     </header>
 
     <main role="main">
     {% block content %}{% endblock %}
     </main>
 
+    <hr class="featurette-divider  mt-5 mb-1">
+
     <footer class="text-muted">
       <div class="container">
         <p class="float-right">
           <a href="#navbarHeader">{{ _('Späť na začiatok') }}</a>
         </p>
-        <p>{{ _('Stránky spravuje občianské združenie SPy. Píšte na info@python.sk, tweetujte na @pyconsk. ') }}<p>
+        <p>Stránky spravuje občianské združenie <a href="{{ url_for('o_nas_page') }}">SPy</a>. Píšte na info@python.sk, tweetujte na @pyconsk.<p>
         <p><small>{{ _('Máme na stránke chybu? Toto je komunitou manažovaná webstránka, zapoj sa na GitHube a pridaj sa tak ku komunite priaznivcov jazyka Python.') }}</small></p>
         <p>
           <a href="https://github.com/pythonsk/pythonsk.github.io/edit/master/templates/index.html" class="btn btn-outline-secondary btn-sm">

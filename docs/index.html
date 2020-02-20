@@ -6,66 +6,73 @@
     <meta name="description" content="">
     <meta name="author" content="SPy o.z.">
     <link rel="icon" href="/static/img/logo/favicon.ico" sizes="16x16">
-    <title>Python.SK</title>
+    <title>Python.SK - Slovak Python User Group</title>
     <link href="/static/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="/static/css/python.css" rel="stylesheet">
+    <link href="/static/css/font-awesome.min.css" type="text/css" rel="stylesheet">
     
     <link rel="alternate" href="https://python.sk/" hreflang="en">
     
     <link rel="canonical" href="https://python.sk/"/>
-    <meta http-equiv="refresh" content="0; URL='/sk'" />
+    
   </head>
 
   <body>
 
     <header>
-      <div class="collapse bg-dark" id="navbarHeader">
+
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
-          <div class="row">
-            <div class="col-sm-8 col-md-7 py-4">
-              <h4 class="text-white">Python.SK spravuje SPy o.z.</h4>
-              <p class="text-muted">
-                Poslaním občianskeho združenia SPy (skratka "Slovak Python") je podpora vývojárov a používateľov programovacieho jazyka Python. Podporujeme a šírime používanie programovacieho jazyka Python a iných open source technológii a open source myšlienok v našej spoločnosti.
-              </p>
-              <p class="text-muted">
-                Viac o nás nájdete na stránke našeho občianskeho združenia: <a href="https://spy.python.sk" title="webstránka SPy o.z." class="text-white">https://spy.python.sk</a>
-              </p>
-            </div>
-            <div class="col-sm-4 offset-md-1 py-4">
-              <h4 class="text-white">Nájdeš nás aj tu:</h4>
-              <ul class="list-unstyled">
-                <li><a href="https://twitter.com/pyconsk" class="text-white">Twitter</a></li>
-                <li><a href="https://facebook.com/pyconsk" class="text-white">Facebook</a></li>
-                <li><a href="https://www.linkedin.com/company/spy-o--z-" class="text-white">LinkedIn</a></li>
-                <li><a href="https://plus.google.com/u/0/b/114745643590416178453/114745643590416178453/posts" class="text-white">Google+</a></li>
-                <li><a href="https://github.com/pyconsk" class="text-white">GitHub</a></li>
-                <li><a href="https://riot.python.sk/#/directory" class="text-white">Chat</a></li>
-                <li><a href="mailto:info@python.sk" class="text-white">Email</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="navbar navbar-dark bg-dark box-shadow">
-        <div class="container d-flex justify-content-between">
-          <a href="#" class="navbar-brand d-flex align-items-center">
-            <img src="/static/img/logo/python_logo.svg" class="header-logo" alt="Python logo" />
-            <strong>Python na Slovensku</strong>
-          </a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+
+            <a href="/" class="navbar-brand d-flex align-items-center">
+              <img src="/static/img/logo/python_logo.svg" class="header-logo" alt="Python logo" />
+              <strong>Slovak Python User Group</strong>
+            </a>
+
+            <div class="justify-content-end  navbar-collapse" id="navbarNavAltMarkup">
+              <div class="navbar-nav">
+                <ul class="navbar-right navbar-nav justify-content-end">
+                  <li class="nav-item">
+                    <a class="nav-link text-white" href="/blog/">Blog</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-white" href="/navody/">Návody</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-white" href="/zapojsa/">Zapoj sa</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-white" href="/ucimepython/">Pre učiteľov</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-white" href="/o_nas/">O nás</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link btn btn-success text-white ml-2 mb-1" href="/daruj/">Daruj 2%</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link btn btn-primary text-white ml-2 mb-1" href="//forum.python.sk">Fórum ↗</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
         </div>
-      </div>
+      </nav>
     </header>
 
     <main role="main">
     
   <section class="jumbotron text-center">
     <div class="container">
-      <img src="/static/img/logo/python.svg">
+      <img class="img-fluid" src="/static/img/logo/python.svg">
       <p class="lead text-muted">
-        Python je moderný programovací jazyk. Je univerzálny poháňa weby, ale aj robotov.
+        Python je moderný programovací jazyk. Je univerzálny, poháňa weby, ale aj robotov.
         Je výborný pre vyučovanie programovania.
       </p>
       <p class="lead text-muted">
@@ -78,32 +85,83 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-4">
-        <h2>Zapoj sa!</h2>
-        <p>Pomôž nám rozšíriť Python na Slovensku. Pro leňochov s peniazmi máme číslo účtu, ale viac oceníme, keď sa chopíš niektorej úlohy a dokončíš ju do konca. Večná sláva zaručená!</p>
-        <p><a class="btn btn-secondary" href="#" role="button">Chcem byť večne slávny &raquo;</a></p>
-      </div><!-- /.col-lg-4 -->
-      <div class="col-lg-4">
         <h2>Pre začiatočníkov</h2>
-        <p>Základy Pythonu sa dajú naučiť aj z prehliadača. Pripravujeme pre teba odkazy na výukové hry, online kurzy, videa, články, knihy a iné...</p>
-        <p><a class="btn btn-secondary" href="#" role="button">Prahnem po vzdelaní &raquo;</a></p>
+        <p>Základy Pythonu sa dajú naučiť aj z prehliadača. Pripravili sme pre Teba zoznam stránok a aj nejaké vlastné materiály, ktoré Ťa odštartujú s Pythonom.</p>
+        <p><a class="btn btn-info" href="/navody/" role="button">Chcem sa naučiť Python &raquo;</a></p>
       </div><!-- /.col-lg-4 -->
       <div class="col-lg-4">
-        <h2>PyCon SK</h2>
-        <p>Slovenská Python konferencia! Pomôž nám s prípravami, propagáciou, skús si prihlásiť prednášku, či workshop. Sponzoruj nás, alebo len príď a uži si akciu!.</p>
-        <p><a class="btn btn-secondary" href="https://www.pycon.sk" target="_blank" role="button">Hurá konfera &raquo;</a></p>
+        <h2>Pre pokročilých</h2>
+        <p>Pomôž komunite rásť - organizovaním meetupov na celom Slovensku, zdieľaním učebných materiálov, podporou učiteľov informatiky alebo prípravou vlasného Lightning talku.</p>
+        <p><a class="btn btn-info" href="/zapojsa/" role="button">Chcem sa zapojiť do komunity &raquo;</a></p>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4">
+        <h2>Pre učiteľov ZŠ a SŠ</h2>
+        <p>Cheš učiť na Python na škole, ale nevieš, ako začať? Alebo hľadáš zaujímavé pokročilé príklady, ktorými zaujmeš žiakov? Spísali sme Ti užitočné stránky, ktoré Ti pomôžu.</p>
+        <p><a class="btn btn-info" href="/ucimepython/" role="button">Chcem učiť v Pythone &raquo;</a></p>
       </div><!-- /.col-lg-4 -->
     </div><!-- /.row -->
-    <hr class="featurette-divider">
+
+    <hr class="featurette-divider  mt-5 mb-5">
+
+    <div class="row">
+      <div class="col-lg-4">
+        <h2>PyCon Slovakia</h2>
+        <p>Slovenská Python konferencia! Každoročne sa tam stretne takmer 600 členov komunity. Pomôž nám s prípravami, propagáciou, skús si prihlásiť prednášku, či workshop. Sponzoruj nás, alebo len príď a uži si akciu!</p>
+        <p><a class="btn btn-primary" href="https://www.pycon.sk" target="_blank" role="button">Hurá konfera &raquo;</a></p>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4">
+        <h2>Učíme s Hardvérom</h2>
+        <p>Informatika vie byť aj hravá - napríklad ak sa použije edukačná hračka BBC micro:bit. Preto pre učiteľov informatiky organizujeme konferencie, školenia, tvoríme metodiky a poskytujeme podporu.</p>
+        <p><a class="btn btn-primary" href="https://www.ucimeshardverom.sk/" role="button">Čo je to BBC micro:bit? &raquo;</a></p>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4">
+        <h2>Python Meetupy</h2>
+        <p>V Bratislavskom ProgressBare organizujeme Python meetupy, ktoré majú vždy rozdielnu úroveň náročnosti - od začiatočníckych po pokročilejšie. Termíny zverejňujeme na našej <a target="_blank" href="https://www.facebook.com/pg/pyconsk">FB stránke</a> alebo cez <a target="_blank" href="https://pycon.us12.list-manage.com/subscribe/post?u=89d883ce643e7200aabe34fa1&id=e1520cb152">newsletter</a>.</p>
+        <p><a class="btn btn-primary" href="https://www.facebook.com/pyconsk/events/" target="_blank" role="button">Kalendár meetupov &raquo;</a></p>
+      </div><!-- /.col-lg-4 -->
+    </div><!-- /.row -->
+
+    <div class="embed-responsive embed-responsive-16by9 text-center mt-5">
+      <iframe class="embed-responsive-item" width="672" height="378" src="https://www.youtube.com/embed/rOlGoEaz-DA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+
+    <hr class="featurette-divider  mt-3 mb-3">
+
+    <h3 class="text-center">Nechajte si posielať novinky na e-mail</h3>
+    <div id="mc_embed_signup">
+      <form class="text-center" action="https://pycon.us12.list-manage.com/subscribe/post?u=89d883ce643e7200aabe34fa1&amp;id=e1520cb152" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank" novalidate="">
+          <div id="mc_embed_signup_scroll">
+      <div class="mc-field-group">
+        <!-- <input type="email" value="" placeholder="Napíš sem svoj email" name="EMAIL" size="30" class="required email" id="mce-EMAIL"> -->
+        <input type="submit" value="Chcem odoberať SPy o.z. newsletter" name="subscribe" id="mc-embedded-subscribe" class="btn btn-warning">
+      </div>
+      <div class="mc-field-group input-group" hidden="">
+          <ul>
+      <li><input type="checkbox" value="2" name="group[17053][2]" id="mce-group[17053]-17053-1" checked=""><label for="mce-group[17053]-17053-1">SPy o.z. Newsletter (monthly updates on Python meetups, PyConSK and Učíme s Hardvérom - in SK lang.)</label></li>
+      </ul>
+      </div>
+
+        <div id="mce-responses" class="clear">
+          <div class="response" id="mce-error-response" style="display:none"></div>
+          <div class="response" id="mce-success-response" style="display:none"></div>
+        </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+          <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_89d883ce643e7200aabe34fa1_e1520cb152" tabindex="-1" value=""></div>
+          </div>
+      </form>
+      </div>
+
   </div><!-- /.container -->
 
     </main>
+
+    <hr class="featurette-divider  mt-5 mb-1">
 
     <footer class="text-muted">
       <div class="container">
         <p class="float-right">
           <a href="#navbarHeader">Späť na začiatok</a>
         </p>
-        <p>Stránky spravuje občianské združenie SPy. Píšte na info@python.sk, tweetujte na @pyconsk. <p>
+        <p>Stránky spravuje občianské združenie <a href="/o_nas/">SPy</a>. Píšte na info@python.sk, tweetujte na @pyconsk.<p>
         <p><small>Máme na stránke chybu? Toto je komunitou manažovaná webstránka, zapoj sa na GitHube a pridaj sa tak ku komunite priaznivcov jazyka Python.</small></p>
         <p>
           <a href="https://github.com/pythonsk/pythonsk.github.io/edit/master/templates/index.html" class="btn btn-outline-secondary btn-sm">
