@@ -1,6 +1,6 @@
 Babel==2.8.0
 click==7.1.1
-Flask==0.12.2
+Flask==1.0
 Flask-Babel==0.11.2
 Frozen-Flask==0.15
 itsdangerous==1.1.0
