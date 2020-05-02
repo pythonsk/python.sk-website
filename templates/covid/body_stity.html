@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="{% if lang_code %}{{ lang_code }}{% else %}sk{% endif %}">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="SPy o.z.">
+    <link rel="icon" href="{{ url_for('static', filename='img/logo/favicon.ico') }}" sizes="16x16">
+    <title>{{ title }}</title>
+    <link href="{{ url_for('static', filename='bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/python.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/covid.css') }}" rel="stylesheet">
+    <link href="/static/css/font-awesome.min.css" type="text/css" rel="stylesheet">
+    {% if lang_code == 'sk' %}
+    <link rel="alternate" href="https://python.sk{{ request.path|replace('/'+lang_code, '/en', 1) }}" hreflang="en">
+    {% else %}
+    <link rel="alternate" href="https://python.sk{{ request.path|replace('/'+lang_code, '/sk', 1) }}" hreflang="sk">
+    {% endif %}
+    <link rel="canonical" href="https://python.sk{{ request.path }}"/>
+    {% if redirect_url %}
+    <meta http-equiv="refresh" content="0; URL='{{ redirect_url }}'"/>
+    {% endif %}
+    <style>
+        {% block page_css %}{% endblock %}
+    </style>
+</head>
+
+<body>
+
+<header>
+
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #306998;">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
+                    aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+
+                <a href="{{ url_for('stity_seniorom') }}" class="navbar-brand d-flex align-items-center">
+                    <img src="{{ url_for('static', filename='img/covid/spy-logo-ld.png') }}" class="header-logo"
+                         alt="Python logo"/>
+                    <strong>{{ _('Slovak Python User Group - SPy o.z.') }}</strong>
+                </a>
+
+                <div class="justify-content-end  navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <ul class="navbar-right navbar-nav justify-content-end">
+                            {% if menu_items %}
+                            {% for item in menu_items %}
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="{{ item.link }}">{{ item.title }}</a>
+                            </li>
+                            {% endfor %}
+                            {% endif %}
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </nav>
+</header>
+
+<main role="main" class="mb-5">
+    {% block content %}{% endblock %}
+</main>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script>
+    window.jQuery || document.write('<script src="{{ url_for('static', filename='js/vendor/jquery-slim.min.js') }}"><\/script>')
+
+
+</script>
+<script src="{{ url_for('static', filename='js/vendor/popper.min.js') }}"></script>
+<script src="{{ url_for('static', filename='bootstrap/js/bootstrap.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/vendor/holder.min.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+{% extends "covid/body_stity.html" %}
+
+{% block content %}
+<div class="container">
+    <div class="row mt-5 align-middle justify-content-center">
+
+        <div class="col-sm-4">
+            <a href="{{ url_for('stity_seniorom_dss') }}">
+                <div class="card covid_menu_card text-center h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Získaj ochranné štíty</h5>
+                        <img class="card-img-top mt-4" src="{{ url_for('static', filename='img/covid/stit.png') }}">
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div class="col-sm-4">
+            <a href="{{ url_for('stity_seniorom_list') }}">
+                <div class="card covid_menu_card text-center h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Napíš Májový list seniorom</h5>
+                        <div>
+                            <img class="card-img-top mt-4" src="{{ url_for('static', filename='img/covid/list.png') }}">
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+
+</div>
+{% endblock %}

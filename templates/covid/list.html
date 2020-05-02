@@ -1,0 +1,105 @@
+{% extends "covid/body_stity.html" %}
+
+{% block page_css %}
+    @media only screen and (min-width: 1500px) {
+        body {
+            background-image:
+                url("/static/img/covid/drawing_strom.png"),
+                url("/static/img/covid/drawing_obalka.png");
+            background-repeat: no-repeat;
+            background-size:
+                30em,
+                12em;
+            background-position:
+                -200px 1vh,
+                right 60vh;
+        }
+    }
+{% endblock %}
+
+{% block content %}
+<div class="container text-center">
+    <div class="jumbotron jumbotron-fluid">
+        <div>
+            <h1 class="display-4">Májový list seniorom</h1>
+
+        </div>
+    </div>
+</div>
+
+<div class="container">
+
+    <!-- INFO TEXT ABOUT THE APPLICATION SECTION -->
+    <div class="">
+        <p>Milé deti,</p>
+        <p>
+            naši seniori, ktorí sú v domovoch dôchodcov, majú zakázané návštevy, aby neochoreli na coronavírus. Nemôžu
+            sa stretnúť s kamarátmi, rodinou, nikto im nemôže priniesť veci. Preto sa môžu cítiť osamelo a smutne.
+        </p>
+        <p class="font-weight-bold text-center">
+            Nie je to škoda, že práve v tento v máji – mesiaci lásky – by mali byť seniori sami?
+        </p>
+        <p>
+            Napíšte alebo nakreslite seniorom list. My sa postaráme o to, aby sa dostal do jedného z domovov dôchodcov
+            po celom Slovensku. Viete, koľkým seniorom vyčaríte úsmev na perách? Veľmi veľa 😊
+        </p>
+        <p class="font-weight-bold text-center">
+            Čo mám písať v liste?
+        </p>
+        <p>
+            Predstavte si, že píšete babke, dedkovi, starej mame, starému otcovi, starkej, starkému. Ako sa máte? Čo
+            teraz robíte? Čo sa vám v posledných dňoch podarilo? Čo nové ste sa naučili? Ako trávite voľný čas? Môžete
+            im dať návody, ako by oni mohli tráviť voľný čas. Môžete im napísať, že sa tešíte, keď opäť budú môcť chodiť
+            vonku a ich rodiny ich prídu navštíviť.
+
+        </p>
+        <p class="font-weight-bold text-center">
+            Čo ak ešte neviem písať?
+        </p>
+        <p>
+            Nevadí! Môžeš nakresliť obrázok seba, seniorov, prírody, svojej izby, kvietok...čokoľvek, čo ti napadne
+            a seniorom by sa to mohlo páčiť!
+        </p>
+        <p class="font-weight-bold text-center">
+            Ako sa mám podpísať?
+        </p>
+        <p>
+            Napíš nám svoje krstné meno, Tvoj vek a mesto. Ak chceš, môžeš napísať aj Tvoju školu, do ktorej chodíš.
+            Mohlo by to vyzerať takto:
+            Janka, 10 rokov, Detva, 3. ZŠ
+
+        </p>
+        <p class="font-weight-bold text-center">
+            Kde to mám poslať?
+
+        </p>
+        <p>
+            Keď máš list hotový, odfoť ho alebo popros rodičov, nech ti s fotením pomôžu. Ak si zručný, môžeš ho napísať
+            aj priamo na počítači. List nám pošli na e-mail: list@pycon.sk
+
+        </p>
+        <p class="font-weight-bold text-center">
+            Čo sa stane s mojím listom?
+        </p>
+        <p>
+            Tvoj list uverejníme na našu webovú stránku, aby si ho mohol prečítať ktorýkoľvek senior, ktorý sa cíti sám.
+            Zároveň náhodné listy vytlačíme, zabalíme do obálky a keď budeme posielať ochranné štíty do domovov
+            dôchodcov, náhodné listy pribalíme do jedného balíka. Potešíme ním celý domov dôchodcov – ochranné štíty
+            dostanú ošetrovateľky a zdravotné sestry, ktorí sa o seniorov starajú a Ty svojím listom potešíš všetkých
+            seniorov.
+
+        </p>
+        <p class="font-weight-bold text-center">
+            Dozviem sa, kde ste môj list poslali?
+        </p>
+        <p>
+
+            Ak sa Tvoj list k seniorom, dáme Ti vedieť, do ktorého Domova dôchodcov išiel a koľko seniorom si vyčaril
+            úsmev na perách 😊
+        </p>
+    </div>
+
+    {% include "covid/footer.html" %}
+</div>
+
+{% endblock %}

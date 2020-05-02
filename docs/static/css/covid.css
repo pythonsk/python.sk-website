@@ -1,0 +1,15 @@
+.covid_menu_card:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.covid_menu_card {
+    border-color:#306998;
+}
+
+.covid_menu_card h5 {
+    color:black;
+}
+
+.jumbotron {
+    background: none;
+}

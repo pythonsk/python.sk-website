@@ -2,7 +2,8 @@
 # -*- coding: utf8 -*-
 import os
 from datetime import datetime
-from flask import Flask, g, request, render_template, abort, make_response
+
+from flask import Flask, g, request, render_template, abort, make_response, url_for
 from flask_babel import Babel
 
 app = Flask(__name__, static_url_path='/static')
@@ -85,12 +86,14 @@ def landing_page():
 
     return render_template('index.html', **template_variables)
 
+
 @app.route('/daruj/')
 def daruj_page():
     template_variables = _get_template_variables(li_index='active')
     template_variables['title'] += " - Daruj"
 
     return render_template('daruj.html', **template_variables)
+
 
 @app.route('/o_nas/')
 def o_nas_page():
@@ -99,12 +102,14 @@ def o_nas_page():
 
     return render_template('o_nas.html', **template_variables)
 
+
 @app.route('/ucimepython/')
 def ucimepython_page():
     template_variables = _get_template_variables(li_index='active')
     template_variables['title'] += " - Učíme Python"
 
     return render_template('ucimepython.html', **template_variables)
+
 
 @app.route('/zapojsa/')
 def zapojsa_page():
@@ -128,6 +133,34 @@ def blog_page():
     template_variables['title'] += " - Blog!"
 
     return render_template('blog.html', **template_variables)
+
+
+@app.route('/stity_seniorom/')
+def stity_seniorom():
+    template_variables = _get_template_variables(li_index='active')
+    template_variables['title'] += " - Výzva pre domovy sociálnych služieb"
+
+    return render_template('covid/stity_seniorom.html', **template_variables)
+
+
+@app.route('/stity_seniorom/ziadost/')
+def stity_seniorom_dss():
+    template_variables = _get_template_variables(li_index='active')
+    template_variables['title'] += " - Získaj ochranné štíty"
+    template_variables['menu_items'] = [
+        {"title": "Napíš list seniorom", "link": url_for('stity_seniorom_list')}]
+
+    return render_template('covid/dss.html', **template_variables)
+
+
+@app.route('/stity_seniorom/list/')
+def stity_seniorom_list():
+    template_variables = _get_template_variables(li_index='active')
+    template_variables['title'] += " - Napíš Májoví list seniorom"
+    template_variables['menu_items'] = [
+        {"title": "Získaj štíty pre DSS", "link": url_for('stity_seniorom_dss')}]
+
+    return render_template('covid/list.html', **template_variables)
 
 
 @app.route('/CNAME')
@@ -186,4 +219,4 @@ def sitemap():
 
 
 if __name__ == "__main__":
-    app.run(debug=True, host=os.environ.get('FLASK_HOST', '127.0.0.1'), port=int(os.environ.get('FLASK_PORT', 5000)))
+    app.run(debug=True, host=os.environ.get('FLASK_HOST', '127.0.0.1'), port=int(os.environ.get('FLASK_PORT', 5100)))
