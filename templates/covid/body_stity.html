@@ -10,7 +10,7 @@
     <link href="{{ url_for('static', filename='bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
     <link href="{{ url_for('static', filename='css/python.css') }}" rel="stylesheet">
     <link href="{{ url_for('static', filename='css/covid.css') }}" rel="stylesheet">
-    <link href="/static/css/font-awesome.min.css" type="text/css" rel="stylesheet">
+<!--    <link href="/static/css/font-awesome.min.css" type="text/css" rel="stylesheet">-->
     {% if lang_code == 'sk' %}
     <link rel="alternate" href="https://python.sk{{ request.path|replace('/'+lang_code, '/en', 1) }}" hreflang="en">
     {% else %}
@@ -66,9 +66,7 @@
     {% block content %}{% endblock %}
 </main>
 
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
+
 <script>
     window.jQuery || document.write('<script src="{{ url_for('static', filename='js/vendor/jquery-slim.min.js') }}"><\/script>')
 
@@ -76,6 +74,6 @@
 </script>
 <script src="{{ url_for('static', filename='js/vendor/popper.min.js') }}"></script>
 <script src="{{ url_for('static', filename='bootstrap/js/bootstrap.min.js') }}"></script>
-<script src="{{ url_for('static', filename='js/vendor/holder.min.js') }}"></script>
+<!--<script src="{{ url_for('static', filename='js/vendor/holder.min.js') }}"></script>-->
 </body>
 </html>
