@@ -1,6 +1,18 @@
 <!doctype html>
 <html lang="{% if lang_code %}{{ lang_code }}{% else %}sk{% endif %}">
 <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-69278502-9"></script>
+    <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-69278502-9');
+
+    </script>
+
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
@@ -10,7 +22,7 @@
     <link href="{{ url_for('static', filename='bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
     <link href="{{ url_for('static', filename='css/python.css') }}" rel="stylesheet">
     <link href="{{ url_for('static', filename='css/covid.css') }}" rel="stylesheet">
-<!--    <link href="/static/css/font-awesome.min.css" type="text/css" rel="stylesheet">-->
+    <!--    <link href="/static/css/font-awesome.min.css" type="text/css" rel="stylesheet">-->
     {% if lang_code == 'sk' %}
     <link rel="alternate" href="https://python.sk{{ request.path|replace('/'+lang_code, '/en', 1) }}" hreflang="en">
     {% else %}
@@ -22,6 +34,8 @@
     {% endif %}
     <style>
         {% block page_css %}{% endblock %}
+
+
     </style>
 </head>
 
@@ -69,6 +83,8 @@
 
 <script>
     window.jQuery || document.write('<script src="{{ url_for('static', filename='js/vendor/jquery-slim.min.js') }}"><\/script>')
+
+
 
 
 </script>
