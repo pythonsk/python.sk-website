@@ -158,7 +158,7 @@ def stity_seniorom_list():
     template_variables = _get_template_variables(li_index='active')
     template_variables['title'] += " - Napíš Májoví list seniorom"
     template_variables['menu_items'] = [
-        {"title": "Získaj štíty pre DSS", "link": url_for('stity_seniorom_dss')}]
+        {"title": "Požiadaj o ochranné štíty", "link": url_for('stity_seniorom_dss')}]
 
     return render_template('covid/list.html', **template_variables)
 
