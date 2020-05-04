@@ -1,14 +1,14 @@
 {% extends "covid/body_stity.html" %}
 
 {% block page_css %}
-    @media only screen and (min-width: 1500px) {
-        body {
-            background-image: url("/static/img/covid/drawing_stit.png");
-            background-repeat: no-repeat;
-            background-size: 19em;
-            background-position: right 10vh;
-        }
-    }
+@media only screen and (min-width: 1500px) {
+body {
+background-image: url("/static/img/covid/drawing_stit.png");
+background-repeat: no-repeat;
+background-size: 19em;
+background-position: right 10vh;
+}
+}
 {% endblock %}
 
 {% block content %}
@@ -27,33 +27,27 @@
     <!-- INFO TEXT ABOUT THE APPLICATION SECTION -->
     <div class="text-justify">
         <p>
-            Na Slovensku sme svedkami, že tí najzraniteľnejší sú seniori, ktorí žijú v DSS. Prevencia je možnosťou, ako
-            ich chrániť. Rozhodli sme sa, že zabezpečíme ochranné štíty tým, ktorí sú s nimi v najbližšom kontakte
-            a starajú sa o nich.
+            Situácia na Slovensku nás nenecháva ľahostajnými. Chceme prispieť k solidarite s tými, ktorí svojou
+            obetavosťou a láskavosťou pomáhajú tam, kde je to najviac potrebné. Máme možnosť pomôcť s výrobou ochranných
+            štítov. Boli by sme radi, ak by sme mohli pomôcť práve Vám.
         </p>
 
         <p>
-            Ak ste DSS, môžete požiadať o ochranné štíty pre zamestnancov prostredníctvom Žiadosti o ochranné štíty,
-            ktorí so seniormi prichádzajú do najbližšieho kontaktu. Snažíme sa o čo najspravodlivejšie rozloženie, preto
-            rozdáme ochranné štíty v každom kraji. Žiadosti budeme posudzovať individuálne.
+            Naša pomoc je určená najmä pre zamestnancov domovov dôchodcov, ako aj pre zamestnancov iných inštitúcií,
+            ktorí sa starajú o rizikové skupiny. Prosím, ak ste sa našli v tejto výzve prejdite na vyplnenie dotazníka.
+            <b>Termín na vyplnenie je do 8.5.2020 23:59.</b>
         </p>
 
         <p>
-            V piatok, 8. mája zverejníme názvy inštitúcií a počet schválených ochranných štítov. Zároveň Vás budeme
-            informovať o Vašom výsledku hodnotenia aj prostredníctvom e-mailu.
+            V pondelok 11. mája 2020 vyhlásime výsledky prvého kola výzvy. Všetkých uchádzačov budeme informovať
+            o výsledku hodnotenia. Boli by sme radi, ak by naše štíty boli v každom kraji na Slovensku. Žiadosti budeme
+            posudzovať individuálne.
         </p>
 
-        <h2>Aký ochranný štít dostanete?</h2>
         <p>
-            V tíme máme členov, ktorí vyučujú 3D modelovanie na slovenských univerzitách. Rozhodli sa spojiť sily
-            a spolu vytvorili model, pod ktorým môžete nosiť dioptrické okuliare.
+            Ďakujeme za Vašu prácu sme v tom s Vami.
         </p>
 
-        <p>Máte 3D tlačiareň a chcete si vytlačiť náš držiak na štít? Môžete si ho stiahnuť zadarmo <a href="#">tu</a>
-        </p>
-
-        <img src="{{ url_for('static', filename='img/covid/lekarka.jpg') }}" alt="Využitie štítu lekárkou"
-             class="img-thumbnail">
     </div>
 
     <!-- FORM SECTION -->
@@ -66,7 +60,7 @@
                       id="bootstrapForm"
                       method="POST">
                     <fieldset>
-                        <h2>Žiadosť o ochranné štíty pre DSS<br><small></small></h2>
+                        <h2>Výzva: Ochranné štíty zariadeniam pre seniorov<br><small></small></h2>
                     </fieldset>
                     <fieldset>
                         <legend for="">Email</legend>
@@ -76,26 +70,27 @@
                     </fieldset>
 
 
-                    <!-- Field type: "title" id: "842755088" -->
-                    <fieldset>
-                        <legend for="842755088">Údaje o žiadateľovi</legend>
-                        <div class="form-group">
-                        </div>
-                    </fieldset>
-
-
                     <!-- Field type: "short" id: "1802365279" -->
                     <fieldset>
-                        <legend for="1802365279">Oficiálny názov DSS</legend>
+                        <legend for="1802365279">Názov zariadenia</legend>
                         <div class="form-group">
                             <input id="1660384565" type="text" name="entry.1660384565" class="form-control" required>
                         </div>
                     </fieldset>
 
 
+                    <!-- Field type: "short" id: "1539189829" -->
+                    <fieldset>
+                        <legend for="1539189829">IČO</legend>
+                        <div class="form-group">
+                            <input id="1922099955" type="text" name="entry.1922099955" class="form-control" required>
+                        </div>
+                    </fieldset>
+
+
                     <!-- Field type: "short" id: "1056015491" -->
                     <fieldset>
-                        <legend for="1056015491">Oficiálne sídlo DSS (ulica a číslo, obec, PSČ)</legend>
+                        <legend for="1056015491">Oficiálne sídlo zariadenia (ulica a číslo, obec, PSČ)</legend>
                         <div class="form-group">
                             <input id="393460971" type="text" name="entry.393460971" class="form-control" required>
                         </div>
@@ -108,15 +103,6 @@
                         </legend>
                         <div class="form-group">
                             <input id="1803848939" type="text" name="entry.1803848939" class="form-control" required>
-                        </div>
-                    </fieldset>
-
-
-                    <!-- Field type: "short" id: "1539189829" -->
-                    <fieldset>
-                        <legend for="1539189829">IČO DSS</legend>
-                        <div class="form-group">
-                            <input id="1922099955" type="text" name="entry.1922099955" class="form-control" required>
                         </div>
                     </fieldset>
 
@@ -139,17 +125,9 @@
                     </fieldset>
 
 
-                    <!-- Field type: "title" id: "1132107642" -->
-                    <fieldset>
-                        <legend for="1132107642">Žiadosť o štíty</legend>
-                        <div class="form-group">
-                        </div>
-                    </fieldset>
-
-
                     <!-- Field type: "short" id: "1284092556" -->
                     <fieldset>
-                        <legend for="1284092556">Celkový počet zamestnancov v DSS</legend>
+                        <legend for="1284092556">Celkový počet zamestnancov v zariadení</legend>
                         <div class="form-group">
                             <input id="1997166317" type="text" name="entry.1997166317" class="form-control" required>
                         </div>
@@ -158,7 +136,7 @@
 
                     <!-- Field type: "short" id: "1477043468" -->
                     <fieldset>
-                        <legend for="1477043468">Z toho počet opatrovateliek a zdravotných sestier:</legend>
+                        <legend for="1477043468">Z toho počet zamestnancov v tíme A podľa krízového plánu</legend>
                         <div class="form-group">
                             <input id="2642763" type="text" name="entry.2642763" class="form-control" required>
                         </div>
@@ -167,37 +145,20 @@
 
                     <!-- Field type: "short" id: "320688476" -->
                     <fieldset>
-                        <legend for="320688476">Celkový počet ubytovaných v DSS:</legend>
+                        <legend for="320688476">Celkový počet ubytovaných seniorov v zariadení</legend>
                         <div class="form-group">
                             <input id="1698776126" type="text" name="entry.1698776126" class="form-control" required>
                         </div>
                     </fieldset>
 
 
-                    <!-- Field type: "short" id: "711834310" -->
+                    <!-- Field type: "paragraph" id: "711834310" -->
                     <fieldset>
-                        <legend for="711834310">Z toho počet seniorov:</legend>
-                        <div class="form-group">
-                            <input id="1739188735" type="text" name="entry.1739188735" class="form-control" required>
-                        </div>
-                    </fieldset>
-
-
-                    <!-- Field type: "paragraph" id: "644657821" -->
-                    <fieldset>
-                        <legend for="644657821">Stručne popíšte služby a formy služieb, ktoré Váš DSS poskytuje. ???
+                        <legend for="711834310">Poskytujete aj iné sociálne služby ako ubytovanie pre seniorov? Ak áno,
+                            uveďte názvy sociálnych služieb a počet klientov
                         </legend>
                         <div class="form-group">
-                            <textarea id="919725857" name="entry.919725857" class="form-control" required></textarea>
-                        </div>
-                    </fieldset>
-
-
-                    <!-- Field type: "short" id: "1138371273" -->
-                    <fieldset>
-                        <legend for="1138371273">Vlastní váš DSS už nejaké ochranné štíty? Ak áno, koľko? ???</legend>
-                        <div class="form-group">
-                            <input id="1352222773" type="text" name="entry.1352222773" class="form-control" required>
+                            <textarea id="1739188735" name="entry.1739188735" class="form-control"></textarea>
                         </div>
                     </fieldset>
 
@@ -222,25 +183,15 @@
 
                     <!-- Field type: "title" id: "1073179158" -->
                     <fieldset>
-                        <legend for="1073179158">GDPR a zmluva</legend>
+                        <legend for="1073179158">Spracovanie osobných údajov a zmluva</legend>
                         <div class="form-group">
-                            <p class="help-block">Údaje poskytnuté v tomto formulári bude spracovávať združenie SPy
-                                o.z., a to
-                                pre 3 účely:
-                                - Vyhodnotenie žiadosti o zaslanie ochranných štítov
-                                - V prípade získania štítov pre účtovné potreby (v rozsahu údajov v Darovacej zmluve)
-                                - V prípade získania štítov pre marketingové potreby (zdieľané budú údaje v rozsahu
-                                názov DSS,
-                                počet poskytnutých štítov a fotky)
-                                Pre potreby prepravy budú kontaktné údaje zaslané kuriérskej spoločnosti, inak vaše
-                                osobné údaje
-                                nebudú zdieľané s ďalšími osobami. Celé znenie toho, ako spracovávame vaše osobné údaje
-                                nájdete
-                                na stránke python.sk/pomozme_seniorom/gdpr
+                            <p class="help-block">Našim cieľom v združení SPy je robiť veci korektne a preto poskytnuté
+                                údaje využijeme iba pre účely spojené s touto výzvou. Celé znenie toho, ako spracovávame
+                                vaše osobné údaje nájdete na stránke <a href="{{ url_for('stity_seniorom_gdpr') }}">
+                                    python.sk/stity_seniorom/gdpr</a><br><br>
                                 Pre potreby účtovníctva (a najmä vyúčtovania grantov, ktoré naše občianske združenie
-                                získalo) je
-                                potrebné, aby každý domov sociálnych služieb, ktorý prijme ochranné štíty, podpísal a
-                                elektronicky zaslal scan darovacej zmluvy.</p>
+                                získalo) je potrebné, aby každý príjemca ochranných štítov podpísal a elektronicky
+                                zaslal scan darovacej zmluvy.</p>
                         </div>
                     </fieldset>
 
@@ -248,7 +199,7 @@
                     <!-- Field type: "choices" id: "1053243533" -->
                     <fieldset>
                         <legend for="1053243533">V prípade získania štítov sa zaväzujem zaslať scan podpísanej darovacej
-                            zmluvy.
+                            zmluvy
                         </legend>
                         <div class="form-group">
                             <div class="radio">
@@ -264,8 +215,7 @@
                     <!-- Field type: "choices" id: "763844322" -->
                     <fieldset>
                         <legend for="763844322">V prípade získania štítov sa zaväzujem zaslať fotku využitia štítov v
-                            našom
-                            zariadení.
+                            našom zariadení
                         </legend>
                         <div class="form-group">
                             <div class="radio">
@@ -280,7 +230,8 @@
 
                     <!-- Field type: "choices" id: "446721617" -->
                     <fieldset>
-                        <legend for="446721617">Potvrdzujem pravdivosť údajov a súhlasím so spracovaním osobných údajov.
+                        <legend for="446721617">Potvrdzujem pravdivosť údajov a súhlasím so spracovaním osobných
+                            údajov
                         </legend>
                         <div class="form-group">
                             <div class="radio">
@@ -293,7 +244,7 @@
                     </fieldset>
 
                     <input type="hidden" name="fvv" value="1">
-                    <input type="hidden" name="fbzx" value="3738013090803722050">
+                    <input type="hidden" name="fbzx" value="3410006446406786384">
                     <!--
                         CAVEAT: In multipages (multisection) forms, *pageHistory* field tells to google what sections we've currently completed.
                         This usually starts as "0" for the first page, then "0,1" in the second page... up to "0,1,2..N" in n-th page.
@@ -306,6 +257,22 @@
                 </form>
             </div>
         </div>
+    </div>
+
+    <!-- ABOUT STIT SECTION -->
+    <div class="mt-5">
+        <h2>Aký ochranný štít dostanete?</h2>
+        <p>
+            V tíme máme členov, ktorí vyučujú 3D modelovanie na slovenských univerzitách. Rozhodli sa spojiť sily
+            a spolu vytvorili model, pod ktorým môžete nosiť dioptrické okuliare.
+        </p>
+
+        <p>Máte 3D tlačiareň a chcete si vytlačiť náš držiak na štít? Môžete si ho stiahnuť zadarmo
+            <a href="{{ url_for('static', filename='download/stit_3Dpomoc.stl') }}">tu</a>
+        </p>
+
+        <img src="{{ url_for('static', filename='img/covid/lekarka.jpg') }}" alt="Využitie štítu lekárkou"
+             class="img-thumbnail">
     </div>
 
     {% include "covid/footer.html" %}

@@ -163,6 +163,18 @@ def stity_seniorom_list():
     return render_template('covid/list.html', **template_variables)
 
 
+@app.route('/stity_seniorom/gdpr/')
+def stity_seniorom_gdpr():
+    template_variables = _get_template_variables(li_index='active')
+    template_variables['title'] += " - Spracúvanie osobných údajov"
+    template_variables['menu_items'] = [
+        {"title": "Požiadaj o ochranné štíty", "link": url_for('stity_seniorom_dss')},
+        {"title": "Napíš list seniorom", "link": url_for('stity_seniorom_list')},
+    ]
+
+    return render_template('covid/gdpr.html', **template_variables)
+
+
 @app.route('/CNAME')
 def gh_cname():
     return 'python.sk'
