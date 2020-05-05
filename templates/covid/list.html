@@ -17,6 +17,16 @@ right 60vh;
 }
 {% endblock %}
 
+{% block page_meta_info %}
+
+    <meta property="og:url"           content="{{ url_for('stity_seniorom_list') }}" />
+    <meta property="og:type"          content="website" />
+    <meta property="og:title"         content="{{ title }}" />
+    <meta property="og:description"   content="Máj je mesiac lásky. Poďme ukázať, aké veľké sú naše malé srdiečka. Pošlime spolu listy tým, ktorí sú teraz sami, a ukážme, že na nich myslíme." />
+    <meta property="og:image"         content="{{ url_for('static', filename='img/covid/list.png') }}" />
+
+{% endblock %}
+
 {% block content %}
 <div class="container text-center">
     <div class="jumbotron jumbotron-fluid">
