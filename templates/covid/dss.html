@@ -11,6 +11,16 @@ background-position: right 10vh;
 }
 {% endblock %}
 
+{% block page_meta_info %}
+
+    <meta property="og:url"           content="{{ url_for('stity_seniorom_dss') }}" />
+    <meta property="og:type"          content="website" />
+    <meta property="og:title"         content="{{ title }}" />
+    <meta property="og:description"   content="Your description" />
+    <meta property="og:image"         content="{{ url_for('static', filename='img/covid/stit.png') }}" />
+
+{% endblock %}
+
 {% block content %}
 <div class="container text-center">
     <div class="jumbotron jumbotron-fluid">
