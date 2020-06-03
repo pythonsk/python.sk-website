@@ -1,0 +1,37 @@
+{% extends "body.html" %}
+
+{% block content %}
+<section class="jumbotron text-center">
+    <div class="container">
+        <h1 class="display-4">Hra Flappy Bird v PyGame Zero</h1>
+        <p class="lead text-muted">
+            <strong>RoboCoop webinár</strong>
+        </p>
+        <p class="lead text-muted">
+
+        </p>
+    </div>
+</section>
+
+<div class="container">
+    <h2>Pred webinárom</h2>
+
+    <p>Stiahni si <a target="_blank" href="https://codewith.mu/">Mu editor</a> a nainštaluj si ho.</p>
+
+    <h2>Počas webináru</h2>
+    <p>Ako prvé si stiahni <a class="btn btn-success btn-sm"
+                              href="{{ url_for('static', filename='download/flappy.zip') }}">tento súbor</a>
+        a ulož si ho na plochu. Následne ho od-zipuj. V Mu editore klikni na tlačidlo <i>Load</i> a otvor súbor <i>game.py</i>.
+    </p>
+    <p>
+        Prezentáciu nadeš <a target="_blank" href="https://slides.com/marekmansell/pygame-zero-flappy/">tu.</a>
+    </p>
+    <h2>Po skončení webináru</h2>
+    <ul>
+        <li>Záznam z prednášky Miroslava Biňasa z PyCon SK nájdeš na    <a href="https://www.youtube.com/watch?v=ajMJ9Cfm8pI">YouTube</a></li>
+        <li>Nezabudni, prosím, vyplniť spätnú väzbu!</li>
+    </ul>
+
+
+</div><!-- /.container -->
+{% endblock %}

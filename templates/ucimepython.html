@@ -1,19 +1,252 @@
 {% extends "body.html" %}
 
 {% block content %}
-  <section class="jumbotron text-center">
+<section class="jumbotron text-center">
     <div class="container">
-      <h1 class="display-4">Pre učiteľov</h1>
-      <p class="lead text-muted">
-        <strong>Sekciu pripravujeme...</strong>
-      </p>
-      <p class="lead text-muted">
-        Už dlhšie sú zverejnené materiály pre učiteľov na stránke Učíme s Hardvérom, a v najbližšom čase pribudnú aj ne-hardvérové Python metodiky práve na tejto stránke :-)
-      </p>
+        <h1 class="display-4">Otvorené vzdelávacie materiály pre učiteľov</h1>
     </div>
-  </section>
+</section>
 
-  <div class="container">
+<div class="container">
 
-  </div><!-- /.container -->
+    <p>Skvelé vzdelávacie materiály nájdeš aj v sekcii <a href="{{ url_for('navody_page') }}">Návody</a>,
+    avšak tu sme vybrali niekoľko veľmi vhodných pre použitie na stredných školách - či už priamo metodické
+    návody, alebo preto, že postupne prevádzajú čitateľa základmi Pythonu.</p>
+    <div class="">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="card-title mb-0">Základy Pythonu</h5>
+            </div>
+            <div class="card-body">
+
+                <div class="row">
+
+                    <div class="col-sm-4 mt-4 d-flex align-items-stretch">
+                        <div class="card">
+                            <div class="card-body">
+                                <a href="https://www.imysleni.cz/ucebnice/zaklady-programovani-v-jazyce-python-pro-stredni-skoly"
+                                   target="_blank">
+                                    <h5 class="card-title">Základy programování v jazyce Python pro střední školy
+                                        [CZ]</h5>
+                                </a>
+                                <p class="card-text">
+                                    Pracovné listy pre žiakov a Metodické listy pre učiteľov
+                                <hr/>
+                                Autor: Blaho, Salanci, Šimandl
+                                <br/>
+                                <span class="badge badge-pill badge-info">Otvorená licencia CC BY-ND</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4 mt-4 d-flex align-items-stretch">
+                        <div class="card">
+                            <div class="card-body">
+                                <a href="http://python.input.sk/"
+                                   target="_blank">
+                                    <h5 class="card-title">Programovanie v Pythone [SK]</h5>
+                                </a>
+                                <p class="card-text">
+                                    Materiál priárne určený pre vysokoškolákov na FMFI UK, avšak je veľmi použiteľný
+                                    aj na stredných školách.
+                                <hr/>
+                                Autor: Andrej Blaho
+                                <br/>
+                                <span class="badge badge-pill badge-info">Otvorená licencia CC BY</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4 mt-4 d-flex align-items-stretch">
+                        <div class="card">
+                            <div class="card-body">
+                                <a href="https://www.py4e.com/"
+                                   target="_blank">
+                                    <h5 class="card-title">Python for Everybody [EN]</h5>
+                                </a>
+                                <p class="card-text">
+                                    Python for Everybody (PY4E) ide od úplných základov
+                                    až po pokročilé koncepty ako databázy a OOP.
+                                <hr/>
+                                Autor: Charles R. Severance
+                                <br/>
+                                <span class="badge badge-pill badge-info">Otvorená licencia CC BY</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4 mt-4 d-flex align-items-stretch">
+                        <div class="card">
+                            <div class="card-body">
+                                <a href="https://smnd.sk/anino/moje/Python.pdf"
+                                   target="_blank">
+
+                                    <h5 class="card-title">PYTHON - učebný text pre septimu osemročného gym. [SK]</h5>
+                                </a>
+                                <p class="card-text">
+                                    Text obsahuje pokročilejšie koncepty ako Dijkstrov algoritmus či multithreading.
+                                <hr/>
+                                Autor: Anino Belan
+                                <br/>
+                                <span class="badge badge-pill badge-info">Otvorená licencia CC BY-NC-SA</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4 mt-4 d-flex align-items-stretch">
+                        <div class="card">
+                            <div class="card-body">
+                                <a href="http://diveintopython3.py.cz/index.html"
+                                   target="_blank">
+                                    <h5 class="card-title">Ponořme se do Pythonu 3 [CZ]</h5>
+                                </a>
+                                <p class="card-text">
+                                    Kniha pokrýva vlastnosti jazyka Python 3 a popisuje rozdiely proti jazyku Python 2.
+                                <hr/>
+                                Autor: Mark Pilgrim, revidované CZ komunitou
+                                <br/>
+                                <span class="badge badge-pill badge-info">Otvorená licencia CC BY-SA</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4 mt-4 d-flex align-items-stretch">
+                        <div class="card">
+                            <div class="card-body">
+                                <a href="http://howto.py.cz/index.htm"
+                                   target="_blank">
+                                    <h5 class="card-title">Učíme se programovat v jazyce Python 3 [CZ]</h5>
+                                </a>
+                                <p class="card-text">
+                                    Adaptácia knihy "How to think like a computer scientist - Learning with Python"
+                                <hr/>
+                                Autor: Jaroslav Kubias
+                                <br/>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!--                    <div class="col-sm-4 mt-4 d-flex align-items-stretch">-->
+                    <!--                        <div class="card">-->
+                    <!--                            <div class="card-body">-->
+                    <!--                                <a href="#"-->
+                    <!--                                   target="_blank">-->
+                    <!--                                    <h5 class="card-title">Korytnačia grafika - modul turtle</h5>-->
+                    <!--                                </a>-->
+                    <!--                                <p class="card-text">-->
+                    <!--                                    Metodika pre učiteľov stredných škôl na modul <i>turtle</i> v Pythone.-->
+                    <!--                                <hr/>-->
+                    <!--                                Autor: Eva Kliemeková-->
+                    <!--                                <br/>-->
+                    <!--                                <span class="badge badge-pill badge-info">Otvorená licencia CC BY-SA</span>-->
+                    <!--                                </p>-->
+                    <!--                            </div>-->
+                    <!--                        </div>-->
+                    <!--                    </div>-->
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!--
+    <div class="">
+        <div class="card mt-4">
+            <div class="card-header">
+                <h5 class="card-title mb-0">Mierne pokročilí</h5>
+            </div>
+            <div class="card-body">
+
+                <div class="row">
+
+                    <div class="col-sm-4 mt-4 d-flex align-items-stretch">
+                        <div class="card">
+                            <div class="card-body">
+                                <a href="#"
+                                   target="_blank">
+                                    <h5 class="card-title">Python prakticky: Automatizácia</h5>
+                                </a>
+                                <p class="card-text">
+
+                                <hr/>
+                                Autor: SPy
+                                <br/>
+                                <span class="badge badge-pill badge-info">Otvorená licencia CC BY-SA</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4 mt-4 d-flex align-items-stretch">
+                        <div class="card">
+                            <div class="card-body">
+                                <a href="#"
+                                   target="_blank">
+                                    <h5 class="card-title">Python prakticky: Web stránky vo Flask-u</h5>
+                                </a>
+                                <p class="card-text">
+
+                                <hr/>
+                                Autor: SPy
+                                <br/>
+                                <span class="badge badge-pill badge-info">Otvorená licencia CC BY-SA</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4 mt-4 d-flex align-items-stretch">
+                        <div class="card">
+                            <div class="card-body">
+                                <a href="#"
+                                   target="_blank">
+                                    <h5 class="card-title">Python prakticky: Dáta a ich vizualizácia</h5>
+                                </a>
+                                <p class="card-text">
+
+                                <hr/>
+                                Autor: SPy
+                                <br/>
+                                <span class="badge badge-pill badge-info">Otvorená licencia CC BY-SA</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4 mt-4 d-flex align-items-stretch">
+                        <div class="card">
+                            <div class="card-body">
+                                <a href="#"
+                                   target="_blank">
+                                    <h5 class="card-title">Python prakticky: IoT s BBC micro:bit</h5>
+                                </a>
+                                <p class="card-text">
+
+                                <hr/>
+                                Autor: SPy
+                                <br/>
+                                <span class="badge badge-pill badge-info">Otvorená licencia CC BY-SA</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    -->
+
+
+</div><!-- /.container -->
 {% endblock %}

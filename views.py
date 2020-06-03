@@ -127,6 +127,14 @@ def navody_page():
     return render_template('navody.html', **template_variables)
 
 
+@app.route('/navody/flappy/')
+def navody_flappy_page():
+    template_variables = _get_template_variables(li_index='active')
+    template_variables['title'] += " - Hra Flappy Bird v PyGame Zero"
+
+    return render_template('navody/flappy.html', **template_variables)
+
+
 @app.route('/blog/')
 def blog_page():
     template_variables = _get_template_variables(li_index='active')
