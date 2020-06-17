@@ -135,6 +135,19 @@ def navody_flappy_page():
     return render_template('navody/flappy.html', **template_variables)
 
 
+@app.route('/navody/scraping/')
+def navody_scraping_page():
+    template_variables = _get_template_variables(li_index='active')
+    template_variables['title'] += " - Web Scraping v Pythone - BeautifulSoup a Requests"
+
+    return render_template('navody/scraping.html', **template_variables)
+
+
+@app.route('/navody/scraping/blog/')
+def navody_scraping_blog_page():
+    return render_template('navody/scraping_blog.html')
+
+
 @app.route('/blog/')
 def blog_page():
     template_variables = _get_template_variables(li_index='active')
