@@ -45,3 +45,37 @@ footer p {
 .box-shadow {
   box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
 }
+
+.post-preview {
+  font-family: 'Open Sans';
+}
+
+.post-preview a {
+  color: #212529;
+  text-decoration: none;
+}
+
+.post-preview a:hover {
+  color: #0085a1;
+}
+
+.post-title {
+  font-size: 36px;
+  font-weight: 800;
+}
+
+.post-preview  a  .post-subtitle {
+    font-weight: 300;
+    margin: 0 0 10px;
+}
+
+.blog-article-content {
+  font-family: 'Open Sans';
+}
+
+
+.blog-article-header h1 {
+  font-family: 'Open Sans';
+  font-size: 50px;
+  font-weight: 800;
+}

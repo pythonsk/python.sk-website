@@ -2,8 +2,11 @@
 # -*- coding: utf8 -*-
 import os
 from datetime import datetime
+from os.path import isfile, join, exists
+from datetime import datetime
 
-from flask import Flask, g, request, render_template, abort, make_response, url_for
+import markdown
+from flask import Flask, g, request, render_template, abort, make_response, url_for, send_from_directory
 from flask_babel import Babel
 
 app = Flask(__name__, static_url_path='/static')
@@ -153,7 +156,107 @@ def blog_page():
     template_variables = _get_template_variables(li_index='active')
     template_variables['title'] += " - Blog!"
 
+    blog_dir_path = join(os.getcwd(), "blog")
+
+    template_variables['articles'] = []
+
+    for filename in os.listdir(blog_dir_path):
+        if filename.endswith(".md") and isfile(join(blog_dir_path, filename)):
+            with open(join(blog_dir_path, filename), "r") as md_file:
+                md = markdown.Markdown(extensions=['meta'])
+                article_html = md.convert(md_file.read())
+                article_link = filename.split(".")[0]
+
+                article_meta = md.Meta
+
+                if len(article_meta.get("title")):
+                    article_title = " ".join(article_meta.get("title"))
+
+                if len(article_meta.get("summary")):
+                    article_summary = " ".join(article_meta.get("summary"))
+
+                if len(article_meta.get("author")):
+                    article_author = article_meta.get("author")[0]
+
+                if len(article_meta.get("date")):
+                    article_date = article_meta.get("date")[0]
+
+                if article_meta.get("hidden"):
+                    continue
+
+                template_variables['articles'] += [
+                    {'title': article_title,
+                     'summary': article_summary,
+                     'author': article_author, 'date': article_date, 'link': article_link},
+                ]
+
+    template_variables['articles'] = sorted(template_variables['articles'], key=lambda k: datetime.strptime(k['date'], '%d.%m.%Y'), reverse=True)
+
     return render_template('blog.html', **template_variables)
+
+
+@app.route('/blog/images/<image_url>')
+def blog_image(image_url):
+    blog_dir_path = join(os.getcwd(), "blog", "images")
+
+    if exists(join(blog_dir_path, image_url)):
+        return send_from_directory(join(blog_dir_path), image_url, mimetype='image/gif')
+    else:
+        return "No IMG"
+
+
+@app.route('/blog/<article_url>/')
+def blog_detail_page(article_url):
+    template_variables = _get_template_variables(li_index='active')
+    template_variables['title'] += " - Blog!"
+
+    blog_dir_path = os.getcwd() + "/blog"
+
+    filename = f"{article_url}.md"
+
+    if exists(join(blog_dir_path, filename)):
+        with open(join(blog_dir_path, filename), "r") as md_file:
+            md = markdown.Markdown(extensions=['meta', 'markdown_captions'])
+
+            article_html = md.convert(md_file.read())
+            article_html = article_html.replace("<img src=\"", "<img src=\"/blog/")
+            article_html = article_html.replace("<img ", "<img class='img-fluid' ")
+            article_html = article_html.replace("<figure", "<figure class='mt-5 mb-5'")
+            article_html = article_html.replace("<figcaption", "<figcaption class='text-center text-muted font-italic'")
+            article_html = article_html.replace("<h1", "<h1 class='mt-5 mb-2'")
+
+            article_link = filename.split(".")[0]
+
+            article_meta = md.Meta
+
+            if len(article_meta.get("title")):
+                article_title = " ".join(article_meta.get("title"))
+
+            if len(article_meta.get("summary")):
+                article_summary = " ".join(article_meta.get("summary"))
+
+            if article_meta.get("bio"):
+                article_bio = " ".join(article_meta.get("bio"))
+            else:
+                article_bio = None
+
+            if len(article_meta.get("author")):
+                article_author = article_meta.get("author")[0]
+
+            if len(article_meta.get("date")):
+                article_date = article_meta.get("date")[0]
+
+            template_variables['article'] = {
+                'title': article_title,
+                'summary': article_summary,
+                'author': article_author,
+                'date': article_date,
+                'link': article_link,
+                'html': article_html,
+                'bio': article_bio,
+            }
+
+    return render_template('blog_detail.html', **template_variables)
 
 
 @app.route('/stity_seniorom/')
