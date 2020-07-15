@@ -154,7 +154,7 @@ def navody_scraping_blog_page():
 @app.route('/blog/')
 def blog_page():
     template_variables = _get_template_variables(li_index='active')
-    template_variables['title'] += " - Blog!"
+    template_variables['title'] += " - Blog"
 
     blog_dir_path = join(os.getcwd(), "blog")
 
@@ -208,7 +208,6 @@ def blog_image(image_url):
 @app.route('/blog/<article_url>/')
 def blog_detail_page(article_url):
     template_variables = _get_template_variables(li_index='active')
-    template_variables['title'] += " - Blog!"
 
     blog_dir_path = os.getcwd() + "/blog"
 
@@ -255,6 +254,8 @@ def blog_detail_page(article_url):
                 'html': article_html,
                 'bio': article_bio,
             }
+
+            template_variables['title'] += f" - {article_title}"
 
     return render_template('blog_detail.html', **template_variables)
 
