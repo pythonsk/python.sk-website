@@ -19,6 +19,17 @@
     {% if redirect_url %}
     <meta http-equiv="refresh" content="0; URL='{{ redirect_url }}'"/>
     {% endif %}
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-69278502-10"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-69278502-10');
+    </script>
+
 </head>
 
 <body>
@@ -61,9 +72,13 @@
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                                     <a class="dropdown-item" target="_blank" href="//pycon.sk">PyCon SK ↗</a>
-                                    <a class="dropdown-item" target="_blank" href="//ucimeshardverom.sk">Učíme s Hardvérom ↗</a>
-                                    <a class="dropdown-item" target="_blank" href="https://www.facebook.com/pyconsk/events/">Python meetupy (FB kalendár) ↗</a>
-                                    <a class="dropdown-item" href="{{ url_for('stity_seniorom') }}">Štíty domovom dôchodcov (COVID-19)</a>
+                                    <a class="dropdown-item" target="_blank" href="//ucimeshardverom.sk">Učíme s
+                                        Hardvérom ↗</a>
+                                    <a class="dropdown-item" target="_blank"
+                                       href="https://www.facebook.com/pyconsk/events/">Python meetupy (FB kalendár)
+                                        ↗</a>
+                                    <a class="dropdown-item" href="{{ url_for('stity_seniorom') }}">Štíty domovom
+                                        dôchodcov (COVID-19)</a>
                                 </div>
                             </li>
                             <li class="nav-item">
@@ -116,6 +131,7 @@
         crossorigin="anonymous"></script>
 <script>
     window.jQuery || document.write('<script src="{{ url_for('static', filename='js/vendor/jquery-slim.min.js') }}"><\/script>')
+
 </script>
 <script src="{{ url_for('static', filename='js/vendor/popper.min.js') }}"></script>
 <script src="{{ url_for('static', filename='bootstrap/js/bootstrap.min.js') }}"></script>
