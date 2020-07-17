@@ -16,8 +16,8 @@ pred niekoľkými mesiacmi sme stáli pred rozhodnutím, či PyCon SK 2020 v mar
 V zásade máš 3 možnosti:
 
 1. Tvoj existujúci **lístok zostáva platný na PyCon SK v júni 2021**. Budeme veľmi radi, ak si ho ponecháš a zúčastníš sa konferencie. V tomto prípade nemusíš robiť nič, a zároveň nám táto možnosť pomôže s cash-flow, nakoľko niektoré poplatky sme začiatkom roka už museli uhradiť.
-2. Ak už teraz vieš, že sa konferencie nemôžeš alebo nechceš zúčastniť, ale zároveň chceš pomôcť Python komunite na Slovensku, podpor ju dobrovoľným vzdaním sa lístku, čím **podporíš vzdelávacie aktivity** ako EduSummit, projekt [Učíme s Hardvérom](https://ucimeshardverom.sk/) či Python meetupy. Stačí, ak nám pošleš mail na info@pycon.sk
-3. Samozrejme, ak by Ti prvé dve možnosti nevyhovovali, máš možnosť požiadať si o **vrátenie lístku**. Stačí, ak nám pošleš mail na info@pycon.sk
+2. Ak už teraz vieš, že sa konferencie nemôžeš alebo nechceš zúčastniť, ale zároveň chceš pomôcť Python komunite na Slovensku, podpor ju dobrovoľným vzdaním sa lístka, čím **podporíš vzdelávacie aktivity** ako EduSummit, projekt [Učíme s Hardvérom](https://ucimeshardverom.sk/) či Python meetupy. Stačí, ak nám pošleš mail na info@pycon.sk
+3. Samozrejme, ak by Ti prvé dve možnosti nevyhovovali, máš možnosť požiadať o **vrátenie peňazí**. Stačí, ak nám pošleš mail na info@pycon.sk
 
 # Budú nejaké Python aktivity na jeseň 2020?
 Áno, budú :-) Súčasná situácia praje skôr menším, lokálnym eventom. Práve preto **na jeseň zintenzívnime organizáciu Python meetupov a aj webinárov**. Zároveň chystáme aj nové kolo školení pre učiteľov informatiky po celom Slovensku v rámci projektu [Učíme s Hardvérom](https://www.ucimeshardverom.sk/). Ak Ťa tieto témy zaujali a chel(a) by si pomôcť s organizáciou (v ktoromkoľvek meste na Slovensku) alebo by si priamo chcel(a) prednášať na meetupe/webinári, ozvi sa nám na info@pycon.sk :-)
