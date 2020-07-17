@@ -5,7 +5,7 @@ Summary: Z bezpečnostných dôvodov sme sa rozhodli PyCon SK presunúť na jún
 Author: Marek Mansell
 Bio: <a href="//marekmansell.sk">Marek Mansell</a> je zanieteným edukátorom, organizátorom a experimentátorom. Pracuje na projekte Učíme s Hardvérom,
      spoluorganizuje PyCon SK, študuje na FIIT STU a pomáha s produkciou na Festivale Atmosféra.
-Date: 15.7.2020
+Date: 17.7.2020
 ---------------------------
 
 Ahojte Pythonisti,
