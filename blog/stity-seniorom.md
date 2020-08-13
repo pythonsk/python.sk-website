@@ -4,7 +4,6 @@ Summary: V rámci projektu Ochranné štíty zariadeniam pre seniorov sme celkov
          ochranných štítov do 93 domovov dôchodcov.
 Author: Nika Klimová, Bibiána Kleinová, Marek Mansell
 Date: 10.8.2020
-Hidden: True
 ---------------------------
 
 Keď na jar vypukla korona kríza, vedeli sme, že chceme pomáhať tým, ktorí musia čeliť vírusu v pomyselnej prvej línií. Správy zo sveta aj z domova nás nenechávali chladnými.  Z informácií, ktoré sme mali z médií, sme vedeli, že zdravotníkom chýbajú základné ochranné pomôcky. Situácia sa zhoršovala a prvých nakazených hlásil Domov sociálnych služieb (DSS) v Pezinku. Vnímali sme, že chceme pomôcť najmä týmto skupinách ktorých vírus najviac ohrozuje. 

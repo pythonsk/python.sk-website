@@ -3,7 +3,6 @@ Title: Máme víťazov súťaže SPy Cup 2020
 Summary: Žiacku súťaž SPyCup 2020 sme vyhodnotili a žiakom odovzdali ceny, niektoré projekty sa dostali aj do televízie.
 Author: Nika Klimová, Bibiána Kleinová, Marek Mansell
 Date: 13.8.2020
-Hidden: True
 ---------------------------
 
 Aj tento rok sa sformovali tímy zo základných a stredných škôl, aby zabojovali v súťaži SPy Cup so svojím hardvérovým projektom. V poradí už druhý ročník súťaže mal dve kategórie:
