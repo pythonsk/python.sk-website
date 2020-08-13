@@ -31,6 +31,6 @@ Prekvapilo nás, akú pozitívnu odozvu listy mali. Chodili nám fotky z DSS a n
 
 Deťom sme za pomoc odoslali diplomy spolu s informáciami, kam listy putovali. Školy získali čestné uznanie. 
 
-Sme radi, že sme mohli našimi projektami prispieť v boji s koronavírusom. Ďakujeme našim partnerom, ktorí nám finančne prispeli: Nadácia Orange, Nadácia Henke Ďalej ďakujeme Kto Pomôže Slovensku. A firme Accenture, ktorá nám pomáhala tlačiť 3D štíty a prispela nám 100 kusmi farebných držiakov na ochranné štíty. Ďakujeme!
+Sme radi, že sme mohli našimi projektami prispieť v boji s koronavírusom. Ďakujeme našim partnerom, ktorí nám finančne prispeli: Nadácia Orange, Nadácia Henkel a Kto Pomôže Slovensku. Taktiež ďakujeme firme Accenture, ktorá nám pomáhala tlačiť 3D štíty a prispela nám 100 kusmi farebných držiakov na ochranné štíty. Ďakujeme!
 
 Celý zoznam podporených zariadení a ďalšie informácie nájdete na [stránke projektu](https://python.sk/stity_seniorom/ziadost/)
