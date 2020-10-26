@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="sk">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="SPy o.z.">
+    <link rel="icon" href="/static/img/logo/favicon.ico" sizes="16x16">
+    <title>Python.SK - BBC micro:bit verzia 2</title>
+    <link href="/static/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/css/python.css" rel="stylesheet">
+    <link href="/static/css/font-awesome.min.css" type="text/css" rel="stylesheet">
+    
+    <link rel="alternate" href="https://python.sk/blog/microbit-v2/" hreflang="en">
+    
+    <link rel="canonical" href="https://python.sk/blog/microbit-v2/"/>
+    
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-69278502-10"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-69278502-10');
+    </script>
+
+</head>
+
+<body>
+
+<header>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
+                    aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+
+                <a href="/" class="navbar-brand d-flex align-items-center">
+                    <img src="/static/img/logo/python_logo.svg" class="header-logo"
+                         alt="Python logo"/>
+                    <strong>Slovak Python User Group</strong>
+                </a>
+
+                <div class="justify-content-end  navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <ul class="navbar-right navbar-nav justify-content-end">
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="/blog/">Blog</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="/navody/">Návody</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="/zapojsa/">Zapoj sa</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="/ucimepython/">Pre učiteľov</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink"
+                                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Projekty
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <a class="dropdown-item" target="_blank" href="//pycon.sk">PyCon SK ↗</a>
+                                    <a class="dropdown-item" target="_blank" href="//ucimeshardverom.sk">Učíme s
+                                        Hardvérom ↗</a>
+                                    <a class="dropdown-item" target="_blank"
+                                       href="https://www.facebook.com/pyconsk/events/">Python meetupy (FB kalendár)
+                                        ↗</a>
+                                    <a class="dropdown-item" href="/stity_seniorom/">Štíty domovom
+                                        dôchodcov (COVID-19)</a>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="/o_nas/">O nás</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link btn btn-success text-white ml-2 mb-1"
+                                   href="/daruj/">Daruj 2%</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link btn btn-primary text-white ml-2 mb-1"
+                                   href="https://forum.python.sk/">Fórum ↗</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </nav>
+</header>
+
+<main role="main">
+    
+<section class="jumbotron text-center">
+    <div class="container blog-article-header">
+        <h1 class="display-4">BBC micro:bit verzia 2</h1>
+    </div>
+</section>
+
+<div class="container">
+
+    <div class="blog-article-content">
+        <div class="row">
+
+            <div class="col-lg-8 col-md-10 mx-auto">
+                <div class="text-justify">
+                    <p>Pred pár dňami <a href="https://microbit.org/new-microbit/">Micro:bit Educational Foundation</a> zverejnila novú verziu populárneho micro:bitu, ktorá obsahuje niekoľko nových funkcií. To samozrejme ale prinieslo množstvo otázok súvisiacich s prechodom na novú verziu micro:bitu, ktoré sa pokúsim zopovedať v tomto príspevku.</p>
+<h3>Čo nové prináša micro:bit V2?</h3>
+<p>Začnime s tým, aké nové funkcie micro:bit V2 ponúka. Sú to najmä:</p>
+<ul>
+<li>Integrovaný reproduktor na prehrávanie melódií</li>
+<li>Integrovaný mikrofón (rozpoznáva úroveň hluku v okolí)</li>
+<li>Logo micro:bitu vie rozpoznávať dotyk prstom (slúži ako &bdquo;tretie tlačidlo&ldquo;)</li>
+<li>Nový energiu šetriaci mód, vďaka ktorému je možné nechať pripojené batérie</li>
+<li>3.3V regulátor dokáže poskytnúť až 200mA prúdu pre pripojené zariadenia</li>
+<li>Viac RAM aj Flash pamäte</li>
+</ul>
+<p>Nový micro:bit má aj zopár &bdquo;kozmetických&ldquo; zmien &ndash; napríklad &bdquo;vykrajované&ldquo; kolíky či zvýraznenú anténu na Bluetooth komunikáciu. Podrobnú špecifikáciu nájdete <a href="https://tech.microbit.org/hardware/">tu.</a></p>
+<p>
+<figure class='mt-5 mb-5'><img class='img-fluid' src="/blog/images/microbit-v2.png" /><figcaption class='text-center text-muted font-italic'>Zdroj: <a href="https://microbit.org/new-microbit/">Micro:bit Educational Foundation</a></figcaption>
+</figure>
+</p>
+<h3>Budú na novom micro:bite fungovať programy a hardvérové doplnky pre pôvodný micro:bit?</h3>
+<p><strong>Áno, všetky existujúce programy budú fungovať aj na novom micro:bite.</strong> Ak ale máte na počítači uložené <em>.hex</em> súbory, tak ich budete musieť nahrať naspäť do prostredia <em>MakeCode</em> a stiahnuť si novo vygenerovaný <em>.hex</em> súbor. Tento novo stiahnutý súbor bude fungovať aj na pôvodnom micro:bite aj na novom micro:bite. To isté platí aj pre <em>online Python editor</em>.</p>
+<p>Čo sa týka hardvérových doplnkov, tam dosiahnuť sto percentnú kompatibilitu môže byť náročnejšie, nakoľko takéto doplnky sú vyrábané desiatkami rôznych výrobcov. Cieľom Micro:bit Educational Foundation je, aby pre pôvodné micro:bity fungovalo všetko tak, ako doteraz.</p>
+<h3>Čo ak mám pôvodné micro:bity?</h3>
+<p>Prirodzene sa vynára otázka, čo robiť, ak máte zakúpené pôvodné micro:bity. V skratke &ndash; nemusíte robiť vôbec nič. Pôvodný micro:bit bude stále plne funkčný, všetko, čo sa s ním dalo robiť doteraz bude fungovať naďalej. Zároveň k nemu existuje obrovské množstvo návodov, videí a metodík, čiže v niektorých prípadoch môže byť ešte vhodnejší, ako nový micro:bit.</p>
+<p>Kým nový micro:bit ponúka niekoľko vylepšení a nových funkcií, žiadne z nich nie sú až tak zásadné, aby znamenali, že musíte nevyhnutne prejsť na nový micro:bit. Napríklad v prípade prehrávania hudby je možno ešte vhodnejšie (a hlavne názornejšie) pre žiakov, ak si pomocou krokosvorkových káblikov pripoja externý reproduktor a tým sa naučia, ako funguje 3,5mm JACK.</p>
+<h3>Strojové učenie a Umelá inteligencia</h3>
+<p>Vďaka rozšírenej RAM a Flash pamäti bude na micro:bite možné robiť &bdquo;náročnejšie&ldquo; aktivity, ako napríklad strojové učenie či umelú inteligenciu. K tomuto ale Micro:bit Educational Foundation ešte nezverenila podrobnejšie informácie, môžeme ich čakať až v priebehu roka 2021. Predpokladám však, že takéto aktivity sa budú týkať najmä stredných škôl.</p>
+<h3>Zhrnutie</h3>
+<p>Napriek nadšeniu z novej verzie táto zmena ovplyvní výučbu s micro:bitmi na základných školách iba minimálne. Na stredných školách bude citelnejšia zmena iba v prípade, ak sa rozhodnete časom robiť so žiami strojové učenie alebo umelú inteligenciu, ktorých podoby sú ale teraz ešte neznáme.</p>
+<p>Ak máte akékoľvek ďalšie otázky, neváhajte sa ich spýtať na <a href="https://forum.python.sk/">forum.python.sk</a></p>
+<p>
+<figure class='mt-5 mb-5'><img class='img-fluid' src="/blog/images/microbit-v2-front.png" /><figcaption class='text-center text-muted font-italic'>Predná strana pôvodného a nového micro:bitu. Zdroj: <a href="https://microbit.org/new-microbit/">Micro:bit Educational Foundation</a></figcaption>
+</figure>
+<figure class='mt-5 mb-5'><img class='img-fluid' src="/blog/images/microbit-v2-back.png" /><figcaption class='text-center text-muted font-italic'>Zadná strana pôvodného a nového micro:bitu. Zdroj: <a href="https://microbit.org/new-microbit/">Micro:bit Educational Foundation</a></figcaption>
+</figure>
+<figure class='mt-5 mb-5'><img class='img-fluid' src="/blog/images/microbit-v2-chart.png" /><figcaption class='text-center text-muted font-italic'>Porovnanie pôvodného a nového micro:bitu. Zdroj: <a href="https://microbit.org/new-microbit/">Micro:bit Educational Foundation</a></figcaption>
+</figure>
+</p>
+                </div>
+
+                <div class="text-muted mt-5">
+                    Pridané dňa <strong>26.10.2020</strong> - <strong>Marek Mansell</strong>
+                </div>
+                <div>
+                    
+                    <hr>
+                    <h3>O autorovi</h3>
+                    <a href="//marekmansell.sk">Marek Mansell</a> je zanieteným edukátorom, organizátorom a experimentátorom. Pracuje na projekte Učíme s Hardvérom, spoluorganizuje PyCon SK, študuje na FIIT STU a pomáha s produkciou na Festivale Atmosféra.
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+
+</main>
+
+<hr class="featurette-divider  mt-5 mb-1">
+
+<footer class="text-muted">
+    <div class="container">
+        <p class="float-right">
+            <a href="#navbarHeader">Späť na začiatok</a>
+        </p>
+        <p>Stránky spravuje občianské združenie <a href="/o_nas/">SPy</a>. Píšte na info@python.sk,
+            tweetujte na @pyconsk.
+        <p>
+        <p><small>Máme na stránke chybu? Toto je komunitou manažovaná webstránka, zapoj sa na GitHube a pridaj sa
+            tak ku komunite priaznivcov jazyka Python.</small></p>
+        <p>
+            <a href="https://github.com/pythonsk/pythonsk.github.io/edit/master/templates/index.html"
+               class="btn btn-outline-secondary btn-sm">
+                Upraviť túto stránku
+            </a>
+        </p>
+    </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script>
+    window.jQuery || document.write('<script src="/static/js/vendor/jquery-slim.min.js"><\/script>')
+
+</script>
+<script src="/static/js/vendor/popper.min.js"></script>
+<script src="/static/bootstrap/js/bootstrap.min.js"></script>
+<script src="/static/js/vendor/holder.min.js"></script>
+</body>
+</html>

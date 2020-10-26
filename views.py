@@ -215,7 +215,17 @@ def blog_detail_page(article_url):
 
     if exists(join(blog_dir_path, filename)):
         with open(join(blog_dir_path, filename), "r") as md_file:
-            md = markdown.Markdown(extensions=['meta', 'markdown_captions'])
+
+            extension_configs = {
+                'smarty': {
+                    'substitutions': {
+                        'left-double-quote': '&bdquo;',
+                        'right-double-quote': '&ldquo;'
+                    }
+                }
+            }
+
+            md = markdown.Markdown(extensions=['meta', 'markdown_captions', 'smarty'],extension_configs=extension_configs)
 
             article_html = md.convert(md_file.read())
             article_html = article_html.replace("<img src=\"", "<img src=\"/blog/")
@@ -223,6 +233,7 @@ def blog_detail_page(article_url):
             article_html = article_html.replace("<figure", "<figure class='mt-5 mb-5'")
             article_html = article_html.replace("<figcaption", "<figcaption class='text-center text-muted font-italic'")
             article_html = article_html.replace("<h1", "<h1 class='mt-5 mb-2'")
+            article_html = article_html.replace("<h2", "<h2 class='mt-4 mb-2'")
 
             article_link = filename.split(".")[0]
 
